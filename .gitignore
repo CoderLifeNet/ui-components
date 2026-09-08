@@ -2,3 +2,7 @@ node_modules
 dist
 artifacts
 coverage
+
+consumers/next-app/.next
+consumers/vite-app/dist
+docs/demo-app/dist
