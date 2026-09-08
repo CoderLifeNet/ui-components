@@ -1,0 +1,21 @@
+{
+  "name": "ui-components-next-smoke",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "next build"
+  },
+  "dependencies": {
+    "@coderlife/ui-core": "file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz",
+    "@coderlife/ui-components": "file:../../artifacts/coderlife-ui-components-0.1.0-alpha.0.tgz",
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "typescript": "5.6.3",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@types/node": "22.7.4"
+  }
+}
