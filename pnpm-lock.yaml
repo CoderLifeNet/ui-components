@@ -31,8 +31,8 @@ importers:
         specifier: 3.0.2
         version: 3.0.2
       '@coderlife/ui-core':
-        specifier: file:../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz
-        version: file:../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: file:../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz
+        version: file:../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@testing-library/jest-dom':
         specifier: 6.9.0
         version: 6.9.0
@@ -206,9 +206,9 @@ packages:
     resolution: {integrity: sha512-y7/yvZ2TPAnR9+jnc00klvNNLkJiXFFrQA/hlLCcxA9a2A4zQIOimyFQ9XfwYKiGD1fb5GY8vbKIIgO8d5Tb2A==}
     engines: {node: '>= 20.12.0'}
 
-  '@coderlife/ui-core@file:../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz':
-    resolution: {integrity: sha512-YiavTtNoVXMOMn6F4pGTt3yex73aTvl3uhiyh20SXVoD+TLnlHxFMmgrPgQzSLxuSbEKx3ZEIDpDPhGQZxdJsQ==, tarball: file:../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz}
-    version: 0.1.0-alpha.0
+  '@coderlife/ui-core@file:../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz':
+    resolution: {integrity: sha512-MRLWoJcWEgqIeYmDJk2AESEJjsoWhwk/qZpaxa2DoEUJr9TrAiaBk9IxK7TpleMFGzZ6goeK1c6VdD2V2Po54A==, tarball: file:../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz}
+    version: 0.1.0-alpha.2
     peerDependencies:
       '@emotion/react': ^11.14.0
       '@emotion/styled': ^11.14.1
@@ -2066,7 +2066,7 @@ snapshots:
       fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
 
-  '@coderlife/ui-core@file:../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@coderlife/ui-core@file:../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.2)(react@19.2.8)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8)

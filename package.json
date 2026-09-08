@@ -1,6 +1,6 @@
 {
   "name": "@coderlife/ui-components",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.2",
   "description": "Advanced components built on @coderlife/ui-core.",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -12,6 +12,7 @@
     "test:watch": "vitest",
     "lint": "eslint .",
     "check:consumers": "pnpm --dir consumers/vite-app install && pnpm --dir consumers/vite-app build && pnpm --dir consumers/next-app install && pnpm --dir consumers/next-app build",
+    "check:acceptance": "pnpm typecheck && pnpm test && pnpm build && pnpm pack:local && pnpm check:consumers",
     "pack:local": "pnpm build && node scripts/pack-local.mjs"
   },
   "keywords": [
@@ -49,7 +50,7 @@
     }
   },
   "peerDependencies": {
-    "@coderlife/ui-core": "^0.1.0-alpha.0",
+    "@coderlife/ui-core": "^0.1.0-alpha.2",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "react": "^19.2.8",
@@ -63,7 +64,7 @@
     "@mui/material": "9.4.0"
   },
   "devDependencies": {
-    "@coderlife/ui-core": "file:../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz",
+    "@coderlife/ui-core": "file:../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz",
     "@changesets/changelog-github": "1.0.1",
     "@changesets/cli": "3.0.2",
     "@testing-library/jest-dom": "6.9.0",

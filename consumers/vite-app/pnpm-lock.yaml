@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@coderlife/ui-components':
-        specifier: file:../../artifacts/coderlife-ui-components-0.1.0-alpha.0.tgz
-        version: file:../../artifacts/coderlife-ui-components-0.1.0-alpha.0.tgz(@coderlife/ui-core@file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: file:../../artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz
+        version: file:../../artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz(@coderlife/ui-core@file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@coderlife/ui-core':
-        specifier: file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz
-        version: file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz
+        version: file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       react:
         specifier: 19.2.8
         version: 19.2.8
@@ -126,19 +126,19 @@ packages:
     resolution: {integrity: sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg==}
     engines: {node: '>=6.9.0'}
 
-  '@coderlife/ui-components@file:../../artifacts/coderlife-ui-components-0.1.0-alpha.0.tgz':
-    resolution: {integrity: sha512-2bKejAga8A8z+69cAH4Acw3at0Ads2YE+Yoa8ukDIVeYUKPhcUQ4kd+VWvB+Q/9JakcRcqFyMmwRffJPTxLtWg==, tarball: file:../../artifacts/coderlife-ui-components-0.1.0-alpha.0.tgz}
-    version: 0.1.0-alpha.0
+  '@coderlife/ui-components@file:../../artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz':
+    resolution: {integrity: sha512-UznaYZLdoytaLrM5naN4THABrs5rfYB5nKcWeNonB/q1rfo5VGIx0c2zx4ciiMEBi4U15soJPjRwSwWBprfe5g==, tarball: file:../../artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz}
+    version: 0.1.0-alpha.2
     peerDependencies:
-      '@coderlife/ui-core': ^0.1.0-alpha.0
+      '@coderlife/ui-core': ^0.1.0-alpha.2
       '@emotion/react': ^11.14.0
       '@emotion/styled': ^11.14.1
       react: ^19.2.8
       react-dom: ^19.2.8
 
-  '@coderlife/ui-core@file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz':
-    resolution: {integrity: sha512-YiavTtNoVXMOMn6F4pGTt3yex73aTvl3uhiyh20SXVoD+TLnlHxFMmgrPgQzSLxuSbEKx3ZEIDpDPhGQZxdJsQ==, tarball: file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz}
-    version: 0.1.0-alpha.0
+  '@coderlife/ui-core@file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz':
+    resolution: {integrity: sha512-MRLWoJcWEgqIeYmDJk2AESEJjsoWhwk/qZpaxa2DoEUJr9TrAiaBk9IxK7TpleMFGzZ6goeK1c6VdD2V2Po54A==, tarball: file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz}
+    version: 0.1.0-alpha.2
     peerDependencies:
       '@emotion/react': ^11.14.0
       '@emotion/styled': ^11.14.1
@@ -1037,9 +1037,9 @@ snapshots:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
 
-  '@coderlife/ui-components@file:../../artifacts/coderlife-ui-components-0.1.0-alpha.0.tgz(@coderlife/ui-core@file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@coderlife/ui-components@file:../../artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz(@coderlife/ui-core@file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
-      '@coderlife/ui-core': file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@coderlife/ui-core': file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@emotion/react': 11.14.0(@types/react@19.2.2)(react@19.2.8)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8)
       '@mui/material': 9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -1049,7 +1049,7 @@ snapshots:
       - '@mui/material-pigment-css'
       - '@types/react'
 
-  '@coderlife/ui-core@file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.0-r2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@coderlife/ui-core@file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.2)(react@19.2.8)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8)

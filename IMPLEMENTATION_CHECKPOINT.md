@@ -17,11 +17,12 @@ Date: 2026-09-08
 - Added semantic-only tracking mode defaults to suppress nested low-level duplicate events.
 - Delivered browsable demo application at `docs/demo-app`.
 - Added consumer gate script (`check:consumers`) and integrated it into CI.
+- Added `check:acceptance` local closeout command.
+- Bumped package version to `0.1.0-alpha.2` and aligned dependency references to core `0.1.0-alpha.2` artifact identity.
 
 ## Remaining
 
-- Add visual comparison automation between upstream and wrapped components.
-- Add bundle budget gate thresholds beyond smoke detection.
+- None for this alpha acceptance closeout.
 
 ## Continuation Commands
 
@@ -31,5 +32,6 @@ pnpm install
 pnpm typecheck
 pnpm test
 pnpm build
+pnpm check:acceptance
 pnpm pack:local
 ```
