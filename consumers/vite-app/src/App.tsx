@@ -1,12 +1,10 @@
-"use client";
-
-import { useEffect, useMemo, useState, type JSX } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "@coderlife/ui-core";
 import SubpathButton from "@coderlife/ui-core/Button";
 import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlife/ui-core/analytics";
 import { TrackingBoundary, UIExtensionsProvider, createAnalyticsExtension } from "@coderlife/ui-core/extensions";
 
-export default function Page(): JSX.Element {
+export function App() {
   const [enabled, setEnabled] = useState(true);
   const [consentGranted, setConsentGranted] = useState(true);
   const [eventCount, setEventCount] = useState(0);
@@ -46,8 +44,8 @@ export default function Page(): JSX.Element {
 
   return (
     <UIExtensionsProvider initialConfig={{ enabled: true }} extensions={[createAnalyticsExtension(runtime)]}>
-      <main style={{ padding: 24, fontFamily: "sans-serif" }}>
-        <h1>Next Smoke</h1>
+      <div style={{ padding: 24, fontFamily: "sans-serif" }}>
+        <h1>Vite Smoke</h1>
         <p>
           Event count: <span data-testid="event-count">{eventCount}</span>
         </p>
@@ -85,7 +83,7 @@ export default function Page(): JSX.Element {
             </Button>
           </TrackingBoundary>
         </div>
-      </main>
+      </div>
     </UIExtensionsProvider>
   );
 }

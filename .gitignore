@@ -5,4 +5,6 @@ coverage
 
 consumers/next-app/.next
 consumers/vite-app/dist
+consumers/external-check/pnpm-lock.yaml
+consumers/external-check/node_modules
 docs/demo-app/dist

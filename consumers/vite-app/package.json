@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@coderlife/ui-core": "file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz",

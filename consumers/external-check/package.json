@@ -1,24 +1,22 @@
 {
-  "name": "ui-components-demo-app",
+  "name": "ui-components-external-check",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "@coderlife/ui-core": "file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz",
     "@coderlife/ui-components": "file:../../artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@mui/material": "9.4.0",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
   "devDependencies": {
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
-    "@vitejs/plugin-react": "5.0.4",
-    "typescript": "7.0.2",
-    "vite": "7.1.3"
+    "typescript": "7.0.2"
   }
 }

@@ -11,8 +11,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint .",
-    "check:consumers": "pnpm --dir consumers/vite-app install && pnpm --dir consumers/vite-app build && pnpm --dir consumers/next-app install && pnpm --dir consumers/next-app build",
-    "check:acceptance": "pnpm typecheck && pnpm test && pnpm build && pnpm pack:local && pnpm check:consumers",
+    "check:consumers": "pnpm --dir consumers/vite-app install && pnpm --dir consumers/vite-app build && pnpm --dir consumers/next-app install && pnpm --dir consumers/next-app build && pnpm exec playwright install chromium && node scripts/check-consumer-browser.mjs",
+    "check:external-consumer": "pnpm --dir consumers/external-check install --ignore-workspace && pnpm --dir consumers/external-check exec tsc -p tsconfig.json --noEmit && pnpm --dir consumers/external-check why @mui/material && pnpm --dir consumers/external-check why react",
+    "check:acceptance": "pnpm typecheck && pnpm test && pnpm build && pnpm pack:local && pnpm check:consumers && pnpm check:external-consumer",
     "pack:local": "pnpm build && node scripts/pack-local.mjs"
   },
   "keywords": [
@@ -77,6 +78,7 @@
     "@typescript-eslint/parser": "8.43.0",
     "eslint": "9.35.0",
     "jsdom": "27.0.0",
+    "playwright": "1.56.1",
     "typescript": "7.0.2",
     "vitest": "4.1.0"
   }

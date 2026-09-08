@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "build": "next build"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "@coderlife/ui-core": "file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz",
