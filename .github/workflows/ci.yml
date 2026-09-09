@@ -11,17 +11,37 @@ permissions:
 jobs:
   build-test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ui-components
     steps:
       - uses: actions/checkout@v4
+        with:
+          path: ui-components
+      - name: Checkout unpublished core source (immutable)
+        uses: actions/checkout@v4
+        with:
+          repository: CoderLifeNet/ui-core
+          ref: bac9d7f6c0f233a6bd761a27fdecba55516314c3
+          path: ui-core
+          persist-credentials: false
+          # Public core needs no secret. For private core, provide a read-only
+          # cross-repository token as CORE_READ_TOKEN (GITHUB_TOKEN is repo-scoped).
+          token: ${{ secrets.CORE_READ_TOKEN || github.token }}
       - uses: pnpm/action-setup@v4
         with:
           version: 11.2.2
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: pnpm
+      - name: Build core tarball from pinned source
+        working-directory: ui-core
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm check:generated
+          pnpm pack:local
+      - name: Bind local artifact integrity without resolving new registry versions
+        run: node scripts/prepare-artifacts.mjs --root
       - run: pnpm install --frozen-lockfile
-      - run: pnpm typecheck
-      - run: pnpm test
-      - run: pnpm build
-      - run: pnpm check:consumers
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm check:acceptance

@@ -11,8 +11,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint .",
-    "check:consumers": "pnpm --dir consumers/vite-app install && pnpm --dir consumers/vite-app build && pnpm --dir consumers/next-app install && pnpm --dir consumers/next-app build && pnpm exec playwright install chromium && node scripts/check-consumer-browser.mjs",
-    "check:external-consumer": "pnpm --dir consumers/external-check install --ignore-workspace && pnpm --dir consumers/external-check exec tsc -p tsconfig.json --noEmit && pnpm --dir consumers/external-check why @mui/material && pnpm --dir consumers/external-check why react",
+    "check:consumers": "node scripts/prepare-artifacts.mjs && pnpm --dir consumers/vite-app install --frozen-lockfile && pnpm --dir consumers/vite-app build && pnpm --dir consumers/next-app install --frozen-lockfile && pnpm --dir consumers/next-app build && pnpm exec playwright install chromium && node scripts/check-consumer-browser.mjs",
+    "check:external-consumer": "node scripts/prepare-artifacts.mjs && pnpm --dir consumers/external-check install --frozen-lockfile && pnpm --dir consumers/external-check typecheck && pnpm --dir consumers/external-check why @mui/material && pnpm --dir consumers/external-check why react",
     "check:acceptance": "pnpm typecheck && pnpm test && pnpm build && pnpm pack:local && pnpm check:consumers && pnpm check:external-consumer",
     "pack:local": "pnpm build && node scripts/pack-local.mjs"
   },
