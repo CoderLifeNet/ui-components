@@ -91,7 +91,7 @@ packages:
     resolution: {integrity: sha512-kiaQS4RXPB6/a8MRhkBa4VwchwtaNzohtdFGwo7ZYsWK63tv7G59NPd+M9wJo944d5vi0aTjiVsIz4Xq+dDlFA==, tarball: file:../../artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz}
     version: 0.1.0-alpha.2
     peerDependencies:
-      '@coderlife/ui-core': ^0.1.0-alpha.2
+      '@coderlife/ui-core': 0.1.0-alpha.2
       '@emotion/react': ^11.14.0
       '@emotion/styled': ^11.14.1
       react: ^19.2.8

@@ -67,13 +67,34 @@ dist.attestations repository --json` and `npm view <package> dist-tags --json`.
 Compare registry integrity with the approved workflow report, confirm public
 access, alpha points to the intended version, and latest remains absent/unchanged.
 
-In an isolated source copy with no local tarballs, change only the two CoderLife
-dependency values in the existing Vite, Next, and external fixtures to exact registry
-`0.1.0-alpha.2`. Keep all React/MUI/Emotion baseline versions. Install each fixture
-from https://registry.npmjs.org/, build Vite/Next, typecheck external-check and
-verify `pnpm why react` / `pnpm why @mui/material` show the expected single versions.
-Run the same root/subpath rendering, opt-out, consent and disabled-runtime browser
-assertions used by `scripts/check-consumer-browser.mjs`, adapting only its preflight
-identity check from local tarball integrity to registry `dist.integrity`.
-Run `npm audit signatures` from an npm-installed registry smoke project to verify
-registry signatures and provenance. Do not claim these checks passed before publication.
+From the canonical components checkout after both packages are published, run:
+
+```sh
+smoke=$(mktemp -d /tmp/coderlife-registry-smoke-XXXXXX)
+git archive HEAD | tar -x -C "$smoke"
+cd "$smoke"
+for fixture in vite-app next-app external-check; do
+  npm pkg set --prefix "consumers/$fixture" \
+    'dependencies.@coderlife/ui-core=0.1.0-alpha.2' \
+    'dependencies.@coderlife/ui-components=0.1.0-alpha.2'
+  pnpm --dir "consumers/$fixture" install --no-frozen-lockfile --registry=https://registry.npmjs.org/
+done
+pnpm --dir consumers/vite-app build
+pnpm --dir consumers/next-app build
+pnpm --dir consumers/external-check typecheck
+pnpm --dir consumers/external-check why react
+pnpm --dir consumers/external-check why @mui/material
+npm pkg delete devDependencies.@coderlife/ui-core
+pnpm install --no-frozen-lockfile --registry=https://registry.npmjs.org/
+pnpm exec playwright install chromium
+node scripts/check-consumer-browser.mjs --registry
+npm install --prefix consumers/external-check --package-lock-only --ignore-scripts --registry=https://registry.npmjs.org/
+npm audit signatures --prefix consumers/external-check
+```
+
+This uses source-only temporary fixtures, preserves explicit baseline versions,
+and changes only CoderLife inputs to exact registry dependencies. The browser
+checker verifies registry SHA512 identities before running the same rendering,
+root/subpath, opt-out, consent and disabled-runtime assertions. Confirm one React
+19.2.8 and MUI 9.4.0 version in the dependency reports. Remove the temporary smoke
+directory after reviewing results. These registry checks cannot pass before publication.
