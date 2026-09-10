@@ -11,11 +11,11 @@ import {
   ThemeProvider,
   Typography,
   createTheme
-} from "@coderlife/ui-core";
-import SubpathButton from "@coderlife/ui-core/Button";
-import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlife/ui-core/analytics";
-import { TrackingBoundary, UIExtensionsProvider, createAnalyticsExtension } from "@coderlife/ui-core/extensions";
-import { DashboardLayout, DataTable, TreeExplorer } from "@coderlife/ui-components";
+} from "@coderlifenet/ui-core";
+import SubpathButton from "@coderlifenet/ui-core/Button";
+import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlifenet/ui-core/analytics";
+import { TrackingBoundary, UIExtensionsProvider, createAnalyticsExtension } from "@coderlifenet/ui-core/extensions";
+import { DashboardLayout, DataTable, TreeExplorer } from "@coderlifenet/ui-components";
 import inventory from "../../../../ui-core/generated/mui-surface.json";
 
 interface InventoryEntry {

@@ -3,13 +3,13 @@ import { userEvent } from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
 import {
   Button as RootButton
-} from "@coderlife/ui-core";
-import { TrackingBoundary, UIExtensionsProvider, createAnalyticsExtension } from "@coderlife/ui-core/extensions";
-import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlife/ui-core/analytics";
+} from "@coderlifenet/ui-core";
+import { TrackingBoundary, UIExtensionsProvider, createAnalyticsExtension } from "@coderlifenet/ui-core/extensions";
+import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlifenet/ui-core/analytics";
 import {
   Button as SubpathButtonNamed,
   default as SubpathButtonDefault
-} from "@coderlife/ui-core/Button";
+} from "@coderlifenet/ui-core/Button";
 
 describe("packaged core routing", () => {
   it("keeps root and subpath Button identities aligned", () => {

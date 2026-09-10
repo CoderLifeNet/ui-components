@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@coderlife/ui-core": "file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz",
-    "@coderlife/ui-components": "file:../../artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz",
+    "@coderlifenet/ui-core": "file:../../../ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz",
+    "@coderlifenet/ui-components": "file:../../artifacts/coderlifenet-ui-components-0.1.0-alpha.2.tgz",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },

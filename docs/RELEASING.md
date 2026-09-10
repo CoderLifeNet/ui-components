@@ -1,18 +1,21 @@
 # Public alpha release
 
-Proposed first publication: `@coderlife/ui-components@0.1.0-alpha.2`, public,
-dist-tag `alpha` only, with exact peer `@coderlife/ui-core@0.1.0-alpha.2`.
+Proposed first publication: `@coderlifenet/ui-components@0.1.0-alpha.2`, public,
+dist-tag `alpha` only, with exact peer `@coderlifenet/ui-core@0.1.0-alpha.2`.
 Publish and registry-verify core first. This repository never publishes on push.
 
 ## Prerequisites and authentication
 
-On 2026-09-10 npm was not authenticated (ENEEDAUTH); neither package was publicly
-visible (404). Scope ownership, package-creation rights, and private versions are
-unverified. Run `npm login --registry=https://registry.npmjs.org/` yourself, then
-`npm whoami` and `npm org ls coderlife <npm-username> --json`. An npm scope owner
-must confirm package creation/write permission; GitHub access proves nothing about
-npm. Never put credentials in chat. If packages exist, inspect versions/tags and
-`npm access list collaborators @coderlife/ui-components --json` before publishing.
+On 2026-09-10 npm authenticated `chrishacia`; `npm org ls coderlifenet chrishacia
+--json` confirmed `owner`, establishing package-creation/publication rights.
+Authenticated package and exact 0.1.0-alpha.2 lookups returned 404 for both new names,
+with no visible versions or tags. Permission is proven by membership, not by 404s.
+Recheck version availability before publication. Local login does not authenticate
+Actions; neither npm-alpha environment had NPM_BOOTSTRAP_TOKEN at verification.
+
+All pre-rename artifact hashes and approval records are superseded. They belong
+to different package identities and must never be published. Approve only the
+new-name tarballs and source/hash reports produced by the final prepare workflows.
 
 Follow [core's release guide](https://github.com/CoderLifeNet/ui-core/blob/main/docs/RELEASING.md)
 for first-publication bootstrap and current official npm/GitHub references.
@@ -23,6 +26,15 @@ settings exist. First publication may use `publish-bootstrap` with a short-lived
 scope-limited granular token with package read-write and bypass 2FA, entered directly
 as GitHub environment secret `NPM_BOOTSTRAP_TOKEN`. Revoke/delete it after configuring
 OIDC. Both modes require provenance. No token has been created by this preparation.
+
+Official npm guidance rechecked on 2026-09-10 still supports bypass-2FA granular
+tokens for direct package publication, but not account-governance operations or
+staged approval. Limit Packages and scopes read-write to `@coderlifenet`, use a
+short expiration and enter the token directly in Settings > Environments >
+npm-alpha > NPM_BOOTSTRAP_TOKEN. Organization-management access is unnecessary.
+Enable npm account 2FA and complete any account challenges on npm itself. For
+later OIDC publishing, explicitly allow direct `npm publish` in trusted-publisher
+settings; stage-only permission does not authorize this workflow.
 
 The `npm-alpha` environment must allow only main, require maintainer approval and
 disable administrator bypass. Only its publishing job has `id-token: write` and
@@ -75,8 +87,8 @@ git archive HEAD | tar -x -C "$smoke"
 cd "$smoke"
 for fixture in vite-app next-app external-check; do
   npm pkg set --prefix "consumers/$fixture" \
-    'dependencies.@coderlife/ui-core=0.1.0-alpha.2' \
-    'dependencies.@coderlife/ui-components=0.1.0-alpha.2'
+    'dependencies.@coderlifenet/ui-core=0.1.0-alpha.2' \
+    'dependencies.@coderlifenet/ui-components=0.1.0-alpha.2'
   pnpm --dir "consumers/$fixture" install --no-frozen-lockfile --registry=https://registry.npmjs.org/
 done
 pnpm --dir consumers/vite-app build
@@ -84,7 +96,7 @@ pnpm --dir consumers/next-app build
 pnpm --dir consumers/external-check typecheck
 pnpm --dir consumers/external-check why react
 pnpm --dir consumers/external-check why @mui/material
-npm pkg delete devDependencies.@coderlife/ui-core
+npm pkg delete devDependencies.@coderlifenet/ui-core
 pnpm install --no-frozen-lockfile --registry=https://registry.npmjs.org/
 pnpm exec playwright install chromium
 node scripts/check-consumer-browser.mjs --registry

@@ -14,13 +14,17 @@ Alpha.2 bounded closeout for packaged consumer verification, browser runtime ass
 - browser runtime verification with explicit event-count assertions
 - external consumer portability fixture check
 
-## Previous Browser-Verified Artifact Identity
+## Superseded Pre-Rename Artifact Identity
+
+The hashes below describe historical pre-rename packages, not the current scope.
+They are not publication candidates. See RELEASING.md and the final prepare run
+for new-name artifact identity; the prior release approval is superseded.
 
 The hashes below identify the previous browser verification, not packs containing
 the new CI scripts. First-CI source packs remain unpublished alpha.2 and their
 actual integrity is recorded by the bootstrap and browser gates.
 
-- ui-components/artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz
+- Historical components tarball (pre-rename, archival only)
 - sha256: 28e83b1d37f806e1a0208817e6dbf0cee15f3991192c66baa73c27e1bb72096f
 - sha512-base64: UznaYZLdoytaLrM5naN4THABrs5rfYB5nKcWeNonB/q1rfo5VGIx0c2zx4ciiMEBi4U15soJPjRwSwWBprfe5g==
 
@@ -40,8 +44,8 @@ Each production fixture page must assert:
 
 - Browser gate: `node scripts/check-consumer-browser.mjs`
 - Artifact identity verified from fixture lockfiles before navigation:
-	- `ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz` integrity `sha512-MRLWoJcWEgqIeYmDJk2AESEJjsoWhwk/qZpaxa2DoEUJr9TrAiaBk9IxK7TpleMFGzZ6goeK1c6VdD2V2Po54A==`
-	- `ui-components/artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz` integrity `sha512-UznaYZLdoytaLrM5naN4THABrs5rfYB5nKcWeNonB/q1rfo5VGIx0c2zx4ciiMEBi4U15soJPjRwSwWBprfe5g==`
+	- Historical core tarball integrity `sha512-MRLWoJcWEgqIeYmDJk2AESEJjsoWhwk/qZpaxa2DoEUJr9TrAiaBk9IxK7TpleMFGzZ6goeK1c6VdD2V2Po54A==`
+	- Historical components tarball integrity `sha512-UznaYZLdoytaLrM5naN4THABrs5rfYB5nKcWeNonB/q1rfo5VGIx0c2zx4ciiMEBi4U15soJPjRwSwWBprfe5g==`
 - Results:
 	- Vite fixture: all assertions pass, pageerror count 0, console error count 0
 	- Next fixture: all assertions pass, pageerror count 0, console error count 0

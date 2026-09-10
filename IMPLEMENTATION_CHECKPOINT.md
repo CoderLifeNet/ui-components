@@ -6,7 +6,7 @@ Date: 2026-09-08
 
 - Initialized standalone `ui-components` repository.
 - Added strict TypeScript build and tests.
-- Installed packed `@coderlife/ui-core` artifact for local verification.
+- Installed packed `@coderlifenet/ui-core` artifact for local verification.
 - Implemented DataTable, TreeExplorer, DashboardLayout.
 - Added baseline behavior tests.
 - Verified consumer smoke builds from packaged tarballs:

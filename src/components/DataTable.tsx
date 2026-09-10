@@ -21,9 +21,9 @@ import {
   TextField,
   Toolbar,
   Typography
-} from "@coderlife/ui-core";
-import { TrackingBoundary } from "@coderlife/ui-core/extensions";
-import { useEmitUIEvent } from "@coderlife/ui-core/instrumentation";
+} from "@coderlifenet/ui-core";
+import { TrackingBoundary } from "@coderlifenet/ui-core/extensions";
+import { useEmitUIEvent } from "@coderlifenet/ui-core/instrumentation";
 
 export type SortDirection = "asc" | "desc";
 

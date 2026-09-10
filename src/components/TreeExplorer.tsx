@@ -10,8 +10,8 @@ import {
   ListItemText,
   Stack,
   Typography
-} from "@coderlife/ui-core";
-import { useEmitUIEvent } from "@coderlife/ui-core/instrumentation";
+} from "@coderlifenet/ui-core";
+import { useEmitUIEvent } from "@coderlifenet/ui-core/instrumentation";
 
 type TreeLabelNode = ComponentProps<typeof ListItemText>["primary"];
 

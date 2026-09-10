@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: CoderLifeNet/ui-core
-          ref: 6435126083f6b5e3aceb40ba6b9b2f1a87f171c2
+          ref: ce4f7a41b7c744719ba311a002770c9f203d72be
           path: ui-core
           persist-credentials: false
           # Public core needs no secret. For private core, provide a read-only

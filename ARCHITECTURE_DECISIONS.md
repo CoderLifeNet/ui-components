@@ -5,7 +5,7 @@
 Status: accepted.
 
 Decision:
-- `ui-components` imports only from published/tarball package entry points of `@coderlife/ui-core`.
+- `ui-components` imports only from published/tarball package entry points of `@coderlifenet/ui-core`.
 
 Rationale:
 - Prevents hidden coupling to unpublished internals.

@@ -17,7 +17,7 @@ for (const relative of directories) {
   const lockPath = path.join(directory, "pnpm-lock.yaml");
   let lock = readFileSync(lockPath, "utf8");
   for (const [name, specifier] of Object.entries({ ...manifest.dependencies, ...manifest.devDependencies })) {
-    if (!name.startsWith("@coderlife/") || !specifier.startsWith("file:")) continue;
+    if (!name.startsWith("@coderlifenet/") || !specifier.startsWith("file:")) continue;
     const tarball = path.resolve(directory, specifier.slice(5));
     const bytes = readFileSync(tarball);
     const packed = JSON.parse(execFileSync("tar", ["-xOf", tarball, "package/package.json"], { encoding: "utf8" }));

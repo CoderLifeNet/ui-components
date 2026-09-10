@@ -1,6 +1,6 @@
-# @coderlife/ui-components
+# @coderlifenet/ui-components
 
-Advanced components built on top of `@coderlife/ui-core` public APIs only.
+Advanced components built on top of `@coderlifenet/ui-core` public APIs only.
 
 ## Components
 
@@ -11,13 +11,13 @@ Advanced components built on top of `@coderlife/ui-core` public APIs only.
 ## Install
 
 ```bash
-pnpm add @coderlife/ui-components@0.1.0-alpha.2 @coderlife/ui-core@0.1.0-alpha.2 @mui/material@9.4.0 @emotion/react@11.14.0 @emotion/styled@11.14.1 react@19.2.8 react-dom@19.2.8
+pnpm add @coderlifenet/ui-components@0.1.0-alpha.2 @coderlifenet/ui-core@0.1.0-alpha.2 @mui/material@9.4.0 @emotion/react@11.14.0 @emotion/styled@11.14.1 react@19.2.8 react-dom@19.2.8
 ```
 
 ## Usage
 
 ```tsx
-import { DataTable, TreeExplorer, DashboardLayout } from "@coderlife/ui-components";
+import { DataTable, TreeExplorer, DashboardLayout } from "@coderlifenet/ui-components";
 ```
 
 ## Feature Scope

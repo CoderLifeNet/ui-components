@@ -2,5 +2,5 @@ allowBuilds:
   esbuild: true
 # Locally built, unpublished artifacts have no registry release timestamp.
 minimumReleaseAgeExclude:
-  - '@coderlife/ui-core'
-  - '@coderlife/ui-components'
+  - '@coderlifenet/ui-core'
+  - '@coderlifenet/ui-components'

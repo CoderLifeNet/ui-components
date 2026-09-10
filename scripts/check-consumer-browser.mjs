@@ -27,17 +27,17 @@ function verifyLockfileIdentity(lockfilePath, expectedCoreIntegrity, expectedCom
   if (REGISTRY_MODE) {
     const fixture = JSON.parse(readFileSync(path.join(path.dirname(lockfilePath), "package.json"), "utf8"));
     assert(!lock.includes("file:"), `${lockfilePath} still contains local dependencies`);
-    for (const name of ["@coderlife/ui-core", "@coderlife/ui-components"]) {
+    for (const name of ["@coderlifenet/ui-core", "@coderlifenet/ui-components"]) {
       assert(fixture.dependencies[name] === "0.1.0-alpha.2", `${name} must use the exact registry alpha`);
       assert(lock.includes(`'${name}@0.1.0-alpha.2':`), `${name} is not registry-locked`);
     }
   } else {
     assert(
-      lock.includes("file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz"),
+      lock.includes("file:../../../ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz"),
       `${lockfilePath} is not pinned to ui-core alpha.2 tarball`
     );
     assert(
-      lock.includes("file:../../artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz"),
+      lock.includes("file:../../artifacts/coderlifenet-ui-components-0.1.0-alpha.2.tgz"),
       `${lockfilePath} is not pinned to ui-components alpha.2 tarball`
     );
   }
@@ -258,8 +258,8 @@ function terminate(child) {
 }
 
 async function main() {
-  const coreTarball = path.resolve(ROOT, "../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz");
-  const componentsTarball = path.resolve(ROOT, "artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz");
+  const coreTarball = path.resolve(ROOT, "../ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz");
+  const componentsTarball = path.resolve(ROOT, "artifacts/coderlifenet-ui-components-0.1.0-alpha.2.tgz");
 
   async function registryIntegrity(name) {
     const response = await fetch(`https://registry.npmjs.org/${encodeURIComponent(name)}/0.1.0-alpha.2`);
@@ -269,8 +269,8 @@ async function main() {
     assert(metadata.dist.integrity.startsWith("sha512-"), `Missing SHA512 registry integrity: ${name}`);
     return metadata.dist.integrity.slice(7);
   }
-  const coreIntegrity = REGISTRY_MODE ? await registryIntegrity("@coderlife/ui-core") : sha512Base64(coreTarball);
-  const componentsIntegrity = REGISTRY_MODE ? await registryIntegrity("@coderlife/ui-components") : sha512Base64(componentsTarball);
+  const coreIntegrity = REGISTRY_MODE ? await registryIntegrity("@coderlifenet/ui-core") : sha512Base64(coreTarball);
+  const componentsIntegrity = REGISTRY_MODE ? await registryIntegrity("@coderlifenet/ui-components") : sha512Base64(componentsTarball);
 
   verifyLockfileIdentity(
     path.resolve(ROOT, "consumers/vite-app/pnpm-lock.yaml"),
@@ -318,11 +318,11 @@ async function main() {
       console.log(JSON.stringify({
         artifacts: {
           core: {
-            tarball: REGISTRY_MODE ? "@coderlife/ui-core@0.1.0-alpha.2 (npm registry)" : "ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz",
+            tarball: REGISTRY_MODE ? "@coderlifenet/ui-core@0.1.0-alpha.2 (npm registry)" : "ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz",
             integrity: `sha512-${coreIntegrity}`
           },
           components: {
-            tarball: REGISTRY_MODE ? "@coderlife/ui-components@0.1.0-alpha.2 (npm registry)" : "ui-components/artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz",
+            tarball: REGISTRY_MODE ? "@coderlifenet/ui-components@0.1.0-alpha.2 (npm registry)" : "ui-components/artifacts/coderlifenet-ui-components-0.1.0-alpha.2.tgz",
             integrity: `sha512-${componentsIntegrity}`
           }
         },

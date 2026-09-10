@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useState, type JSX } from "react";
-import { Button } from "@coderlife/ui-core";
-import SubpathButton from "@coderlife/ui-core/Button";
-import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlife/ui-core/analytics";
-import { TrackingBoundary, UIExtensionsProvider, createAnalyticsExtension } from "@coderlife/ui-core/extensions";
+import { Button } from "@coderlifenet/ui-core";
+import SubpathButton from "@coderlifenet/ui-core/Button";
+import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlifenet/ui-core/analytics";
+import { TrackingBoundary, UIExtensionsProvider, createAnalyticsExtension } from "@coderlifenet/ui-core/extensions";
 
 export default function Page(): JSX.Element {
   const [enabled, setEnabled] = useState(true);

@@ -1,5 +1,5 @@
 ---
-"@coderlife/ui-components": minor
+"@coderlifenet/ui-components": minor
 ---
 
-Initial alpha release of DataTable, TreeExplorer, and DashboardLayout built on @coderlife/ui-core.
+Initial alpha release of DataTable, TreeExplorer, and DashboardLayout built on @coderlifenet/ui-core.

@@ -1,5 +1,5 @@
 allowBuilds:
   esbuild: true
 minimumReleaseAgeExclude:
-  - '@coderlife/ui-core'
-  - '@coderlife/ui-components'
+  - '@coderlifenet/ui-core'
+  - '@coderlifenet/ui-components'

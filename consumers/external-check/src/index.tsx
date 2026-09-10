@@ -1,7 +1,7 @@
-import { Button } from "@coderlife/ui-core";
-import { Button as SubpathButton } from "@coderlife/ui-core/Button";
-import type { SelectChangeEvent } from "@coderlife/ui-core";
-import { DataTable } from "@coderlife/ui-components";
+import { Button } from "@coderlifenet/ui-core";
+import { Button as SubpathButton } from "@coderlifenet/ui-core/Button";
+import type { SelectChangeEvent } from "@coderlifenet/ui-core";
+import { DataTable } from "@coderlifenet/ui-components";
 
 const _selectEvent = (_event: SelectChangeEvent<string>) => undefined;
 

@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
-import { UIExtensionsProvider, createAnalyticsExtension } from "@coderlife/ui-core/extensions";
-import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlife/ui-core/analytics";
+import { UIExtensionsProvider, createAnalyticsExtension } from "@coderlifenet/ui-core/extensions";
+import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlifenet/ui-core/analytics";
 import { DashboardLayout } from "../src/components/DashboardLayout.js";
 
 describe("DashboardLayout", () => {
