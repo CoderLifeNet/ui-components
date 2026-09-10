@@ -11,7 +11,7 @@ Advanced components built on top of `@coderlife/ui-core` public APIs only.
 ## Install
 
 ```bash
-pnpm add @coderlife/ui-components @coderlife/ui-core
+pnpm add @coderlife/ui-components@0.1.0-alpha.2 @coderlife/ui-core@0.1.0-alpha.2 @mui/material@9.4.0 @emotion/react@11.14.0 @emotion/styled@11.14.1 react@19.2.8 react-dom@19.2.8
 ```
 
 ## Usage

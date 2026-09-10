@@ -88,7 +88,7 @@ packages:
     engines: {node: '>=6.9.0'}
 
   '@coderlife/ui-components@file:../../artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz':
-    resolution: {integrity: sha512-UznaYZLdoytaLrM5naN4THABrs5rfYB5nKcWeNonB/q1rfo5VGIx0c2zx4ciiMEBi4U15soJPjRwSwWBprfe5g==, tarball: file:../../artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz}
+    resolution: {integrity: sha512-kiaQS4RXPB6/a8MRhkBa4VwchwtaNzohtdFGwo7ZYsWK63tv7G59NPd+M9wJo944d5vi0aTjiVsIz4Xq+dDlFA==, tarball: file:../../artifacts/coderlife-ui-components-0.1.0-alpha.2.tgz}
     version: 0.1.0-alpha.2
     peerDependencies:
       '@coderlife/ui-core': ^0.1.0-alpha.2
@@ -98,7 +98,7 @@ packages:
       react-dom: ^19.2.8
 
   '@coderlife/ui-core@file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz':
-    resolution: {integrity: sha512-MRLWoJcWEgqIeYmDJk2AESEJjsoWhwk/qZpaxa2DoEUJr9TrAiaBk9IxK7TpleMFGzZ6goeK1c6VdD2V2Po54A==, tarball: file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz}
+    resolution: {integrity: sha512-bLvGUPZgh42tLw7nDeE2sTM1QADydjBWrCsEzwi5mtgECrqTCaKb1nbQ/UnLA9x88YnWEVdy+ywcdbApwdUnng==, tarball: file:../../../ui-core/artifacts/coderlife-ui-core-0.1.0-alpha.2.tgz}
     version: 0.1.0-alpha.2
     peerDependencies:
       '@emotion/react': ^11.14.0
