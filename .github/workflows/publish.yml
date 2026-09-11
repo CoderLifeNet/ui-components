@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           repository: CoderLifeNet/ui-core
-          ref: ce4f7a41b7c744719ba311a002770c9f203d72be
+          ref: 2ffe4807ddef447fa22deb70b553a84624727cff
           path: ui-core
           persist-credentials: false
       - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1
@@ -84,7 +84,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           repository: CoderLifeNet/ui-core
-          ref: ce4f7a41b7c744719ba311a002770c9f203d72be
+          ref: 2ffe4807ddef447fa22deb70b553a84624727cff
           path: ui-core
           persist-credentials: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
@@ -103,4 +103,4 @@ jobs:
           RELEASE_MODE: ${{ inputs.mode }}
         run: |
           if [ "$RELEASE_MODE" = publish-bootstrap ]; then test -n "$NODE_AUTH_TOKEN"; fi
-          npm publish artifacts/coderlifenet-ui-components-0.1.0-alpha.2.tgz --ignore-scripts --access public --tag alpha --provenance --registry https://registry.npmjs.org/
+          node ../ui-core/scripts/check-release.mjs --publish

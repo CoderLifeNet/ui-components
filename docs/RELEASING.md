@@ -1,5 +1,13 @@
 # Public alpha release
 
+Protected publication and dry-run now use the same pinned core release inspector
+and absolute-tarball-path helper. The helper checks that the `.tgz` exists before
+invoking npm, avoiding npm 11's GitHub-shorthand parsing of bare `artifacts/...`.
+Real publication still verifies the source/hash record, registry availability,
+and published core first, with public access, alpha tagging and provenance.
+The path fix supersedes prior source/hash approval records: refresh CI and prepare
+artifacts at the new workflow commits before approving new protected runs.
+
 ## Prepublication security disposition
 
 The reported high-severity audit result was the demo's direct development
