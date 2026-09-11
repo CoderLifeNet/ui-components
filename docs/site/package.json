@@ -1,0 +1,40 @@
+{
+  "name": "coderlifenet-ui-documentation",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "inventory": "node scripts/inventory.mjs",
+    "typecheck": "tsc -b",
+    "build": "npm run inventory && npm run typecheck && vite build && vite build --ssr src/prerender.tsx --outDir .render && node .render/prerender.js && node scripts/check-build.mjs",
+    "lint": "oxlint src scripts",
+    "format:check": "prettier --check src scripts public/theme.js index.html vite.config.ts tsconfig*.json package.json README.md",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:browser": "node scripts/check-browser.mjs"
+  },
+  "dependencies": {
+    "@coderlifenet/ui-components": "0.1.0-alpha.2",
+    "@coderlifenet/ui-core": "0.1.0-alpha.2",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@fontsource/ibm-plex-sans": "5.3.0",
+    "@fontsource/space-grotesk": "5.3.0",
+    "@mui/material": "9.4.0",
+    "lucide-react": "1.44.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@types/node": "24.4.0",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@vitejs/plugin-react": "5.0.4",
+    "oxlint": "1.81.0",
+    "playwright": "1.56.1",
+    "prettier": "3.6.2",
+    "typescript": "7.0.2",
+    "vite": "7.3.6"
+  }
+}

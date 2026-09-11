@@ -196,6 +196,22 @@ the correct repository URL. Publication uses `--tag alpha --access public
 
 ## Post-publication registry smoke checks
 
+### Latest-tag owner handoff (2026-09-11)
+
+Anonymous recheck at 05:45 UTC: both public packages still have alpha and latest
+at `0.1.0-alpha.2`, their only published version. The historical removal E403
+remains unexplained; current `npm whoami` returned E401, so no write retry was
+made. No tag, version, credential, workflow or trust setting was changed.
+
+Owner: authenticate privately, confirm package read-write permission and satisfy
+configured 2FA. Re-read each package's tags immediately before mutation; preserve
+any stable latest that has appeared. Remove only a still-alpha latest, never the
+alpha tag or published version. Exact commands and least-privilege rationale are
+in [the foundation handoff](UI_FOUNDATION.md#release-tag-investigation-2026-09-11-utc).
+This remains a manual release-policy exception, not a publication failure or
+authorization to republish. Stage-only package-write permission can manage tags;
+do not request direct-publish permission solely for this repair.
+
 For both packages, run `npm view <package>@0.1.0-alpha.2 version dist.integrity
 dist.attestations repository --json` and `npm view <package> dist-tags --json`.
 Compare registry integrity with the approved workflow report, confirm public
