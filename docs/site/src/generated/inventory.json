@@ -1,0 +1,3264 @@
+{
+  "version": "0.1.0-alpha.2",
+  "mui": "9.4.0",
+  "upstreamChecked": "2026-09-11",
+  "entries": [
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": ".",
+      "name": "Root exports",
+      "category": "package-entry",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Root%20exports",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": null,
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./extensions",
+      "name": "extensions",
+      "category": "package-entry",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-extensions",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/extensions/index.d.ts",
+        "default": "./dist/extensions/index.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": null,
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./analytics",
+      "name": "analytics",
+      "category": "package-entry",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-analytics",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/analytics/index.d.ts",
+        "default": "./dist/analytics/index.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": null,
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./instrumentation",
+      "name": "instrumentation",
+      "category": "package-entry",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-instrumentation",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/instrumentation/index.d.ts",
+        "default": "./dist/instrumentation/index.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": null,
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./lab",
+      "name": "lab",
+      "category": "package-entry",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-lab",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/lab/index.d.ts",
+        "default": "./dist/lab/index.js"
+      },
+      "availability": "optional-peer-required",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": null,
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./icons",
+      "name": "icons",
+      "category": "package-entry",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-icons",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/icons/index.d.ts",
+        "default": "./dist/icons/index.js"
+      },
+      "availability": "optional-peer-required",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": null,
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./coverage",
+      "name": "coverage",
+      "category": "package-entry",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-coverage",
+      "example": null,
+      "status": "reference-pending",
+      "target": "./generated/mui-surface.json",
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": null,
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Accordion",
+      "name": "Accordion",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Accordion",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Accordion.d.ts",
+        "default": "./dist/material/Accordion.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Accordion",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./AccordionActions",
+      "name": "AccordionActions",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-AccordionActions",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/AccordionActions.d.ts",
+        "default": "./dist/material/AccordionActions.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/AccordionActions",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./AccordionDetails",
+      "name": "AccordionDetails",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-AccordionDetails",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/AccordionDetails.d.ts",
+        "default": "./dist/material/AccordionDetails.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/AccordionDetails",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./AccordionSummary",
+      "name": "AccordionSummary",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-AccordionSummary",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/AccordionSummary.d.ts",
+        "default": "./dist/material/AccordionSummary.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/AccordionSummary",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Alert",
+      "name": "Alert",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Alert",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Alert.d.ts",
+        "default": "./dist/material/Alert.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Alert",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./AlertTitle",
+      "name": "AlertTitle",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-AlertTitle",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/AlertTitle.d.ts",
+        "default": "./dist/material/AlertTitle.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/AlertTitle",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./AppBar",
+      "name": "AppBar",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-AppBar",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/AppBar.d.ts",
+        "default": "./dist/material/AppBar.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/AppBar",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Autocomplete",
+      "name": "Autocomplete",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Autocomplete",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Autocomplete.d.ts",
+        "default": "./dist/material/Autocomplete.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Autocomplete",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Avatar",
+      "name": "Avatar",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Avatar",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Avatar.d.ts",
+        "default": "./dist/material/Avatar.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Avatar",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./AvatarGroup",
+      "name": "AvatarGroup",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-AvatarGroup",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/AvatarGroup.d.ts",
+        "default": "./dist/material/AvatarGroup.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/AvatarGroup",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Backdrop",
+      "name": "Backdrop",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Backdrop",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Backdrop.d.ts",
+        "default": "./dist/material/Backdrop.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Backdrop",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Badge",
+      "name": "Badge",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Badge",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Badge.d.ts",
+        "default": "./dist/material/Badge.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Badge",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./BottomNavigation",
+      "name": "BottomNavigation",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-BottomNavigation",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/BottomNavigation.d.ts",
+        "default": "./dist/material/BottomNavigation.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/BottomNavigation",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./BottomNavigationAction",
+      "name": "BottomNavigationAction",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-BottomNavigationAction",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/BottomNavigationAction.d.ts",
+        "default": "./dist/material/BottomNavigationAction.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/BottomNavigationAction",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Box",
+      "name": "Box",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Box",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Box.d.ts",
+        "default": "./dist/material/Box.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Box",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Breadcrumbs",
+      "name": "Breadcrumbs",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Breadcrumbs",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Breadcrumbs.d.ts",
+        "default": "./dist/material/Breadcrumbs.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Breadcrumbs",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Button",
+      "name": "Button",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/core/button/",
+      "example": "button",
+      "status": "template-ready",
+      "target": {
+        "types": "./dist/material/Button.d.ts",
+        "default": "./dist/material/Button.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Button",
+      "upstreamGuide": "https://mui.com/material-ui/react-button/",
+      "upstreamApi": "https://mui.com/material-ui/api/button/"
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ButtonBase",
+      "name": "ButtonBase",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ButtonBase",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ButtonBase.d.ts",
+        "default": "./dist/material/ButtonBase.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ButtonBase",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ButtonBase/TouchRipple",
+      "name": "ButtonBase/TouchRipple",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ButtonBase%2FTouchRipple",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ButtonBase/TouchRipple.d.ts",
+        "default": "./dist/material/ButtonBase/TouchRipple.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ButtonBase/TouchRipple",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ButtonGroup",
+      "name": "ButtonGroup",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ButtonGroup",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ButtonGroup.d.ts",
+        "default": "./dist/material/ButtonGroup.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ButtonGroup",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Card",
+      "name": "Card",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Card",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Card.d.ts",
+        "default": "./dist/material/Card.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Card",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./CardActionArea",
+      "name": "CardActionArea",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-CardActionArea",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/CardActionArea.d.ts",
+        "default": "./dist/material/CardActionArea.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/CardActionArea",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./CardActions",
+      "name": "CardActions",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-CardActions",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/CardActions.d.ts",
+        "default": "./dist/material/CardActions.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/CardActions",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./CardContent",
+      "name": "CardContent",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-CardContent",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/CardContent.d.ts",
+        "default": "./dist/material/CardContent.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/CardContent",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./CardHeader",
+      "name": "CardHeader",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-CardHeader",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/CardHeader.d.ts",
+        "default": "./dist/material/CardHeader.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/CardHeader",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./CardMedia",
+      "name": "CardMedia",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-CardMedia",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/CardMedia.d.ts",
+        "default": "./dist/material/CardMedia.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/CardMedia",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Checkbox",
+      "name": "Checkbox",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Checkbox",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Checkbox.d.ts",
+        "default": "./dist/material/Checkbox.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Checkbox",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Chip",
+      "name": "Chip",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Chip",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Chip.d.ts",
+        "default": "./dist/material/Chip.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Chip",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./CircularProgress",
+      "name": "CircularProgress",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-CircularProgress",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/CircularProgress.d.ts",
+        "default": "./dist/material/CircularProgress.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/CircularProgress",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ClickAwayListener",
+      "name": "ClickAwayListener",
+      "category": "type-only",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ClickAwayListener",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ClickAwayListener.d.ts",
+        "default": "./dist/material/ClickAwayListener.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ClickAwayListener",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Collapse",
+      "name": "Collapse",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Collapse",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Collapse.d.ts",
+        "default": "./dist/material/Collapse.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Collapse",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Container",
+      "name": "Container",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Container",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Container.d.ts",
+        "default": "./dist/material/Container.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Container",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./CssBaseline",
+      "name": "CssBaseline",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-CssBaseline",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/CssBaseline.d.ts",
+        "default": "./dist/material/CssBaseline.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/CssBaseline",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./DefaultPropsProvider",
+      "name": "DefaultPropsProvider",
+      "category": "context-provider",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-DefaultPropsProvider",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/DefaultPropsProvider.d.ts",
+        "default": "./dist/material/DefaultPropsProvider.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/DefaultPropsProvider",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Dialog",
+      "name": "Dialog",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Dialog",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Dialog.d.ts",
+        "default": "./dist/material/Dialog.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Dialog",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./DialogActions",
+      "name": "DialogActions",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-DialogActions",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/DialogActions.d.ts",
+        "default": "./dist/material/DialogActions.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/DialogActions",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./DialogContent",
+      "name": "DialogContent",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-DialogContent",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/DialogContent.d.ts",
+        "default": "./dist/material/DialogContent.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/DialogContent",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./DialogContentText",
+      "name": "DialogContentText",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-DialogContentText",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/DialogContentText.d.ts",
+        "default": "./dist/material/DialogContentText.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/DialogContentText",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./DialogTitle",
+      "name": "DialogTitle",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-DialogTitle",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/DialogTitle.d.ts",
+        "default": "./dist/material/DialogTitle.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/DialogTitle",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Divider",
+      "name": "Divider",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/core/divider/",
+      "example": "divider",
+      "status": "template-ready",
+      "target": {
+        "types": "./dist/material/Divider.d.ts",
+        "default": "./dist/material/Divider.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Divider",
+      "upstreamGuide": "https://mui.com/material-ui/react-divider/",
+      "upstreamApi": "https://mui.com/material-ui/api/divider/"
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Drawer",
+      "name": "Drawer",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Drawer",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Drawer.d.ts",
+        "default": "./dist/material/Drawer.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Drawer",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Fab",
+      "name": "Fab",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Fab",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Fab.d.ts",
+        "default": "./dist/material/Fab.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Fab",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Fade",
+      "name": "Fade",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Fade",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Fade.d.ts",
+        "default": "./dist/material/Fade.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Fade",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./FilledInput",
+      "name": "FilledInput",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-FilledInput",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/FilledInput.d.ts",
+        "default": "./dist/material/FilledInput.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/FilledInput",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./FormControl",
+      "name": "FormControl",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-FormControl",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/FormControl.d.ts",
+        "default": "./dist/material/FormControl.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/FormControl",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./FormControlLabel",
+      "name": "FormControlLabel",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-FormControlLabel",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/FormControlLabel.d.ts",
+        "default": "./dist/material/FormControlLabel.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/FormControlLabel",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./FormGroup",
+      "name": "FormGroup",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-FormGroup",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/FormGroup.d.ts",
+        "default": "./dist/material/FormGroup.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/FormGroup",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./FormHelperText",
+      "name": "FormHelperText",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-FormHelperText",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/FormHelperText.d.ts",
+        "default": "./dist/material/FormHelperText.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/FormHelperText",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./FormLabel",
+      "name": "FormLabel",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-FormLabel",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/FormLabel.d.ts",
+        "default": "./dist/material/FormLabel.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/FormLabel",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./GlobalStyles",
+      "name": "GlobalStyles",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-GlobalStyles",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/GlobalStyles.d.ts",
+        "default": "./dist/material/GlobalStyles.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/GlobalStyles",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Grid",
+      "name": "Grid",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Grid",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Grid.d.ts",
+        "default": "./dist/material/Grid.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Grid",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Grow",
+      "name": "Grow",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Grow",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Grow.d.ts",
+        "default": "./dist/material/Grow.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Grow",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Icon",
+      "name": "Icon",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Icon",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Icon.d.ts",
+        "default": "./dist/material/Icon.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Icon",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./IconButton",
+      "name": "IconButton",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-IconButton",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/IconButton.d.ts",
+        "default": "./dist/material/IconButton.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/IconButton",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ImageList",
+      "name": "ImageList",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ImageList",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ImageList.d.ts",
+        "default": "./dist/material/ImageList.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ImageList",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ImageListItem",
+      "name": "ImageListItem",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ImageListItem",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ImageListItem.d.ts",
+        "default": "./dist/material/ImageListItem.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ImageListItem",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ImageListItemBar",
+      "name": "ImageListItemBar",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ImageListItemBar",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ImageListItemBar.d.ts",
+        "default": "./dist/material/ImageListItemBar.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ImageListItemBar",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./InitColorSchemeScript",
+      "name": "InitColorSchemeScript",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-InitColorSchemeScript",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/InitColorSchemeScript.d.ts",
+        "default": "./dist/material/InitColorSchemeScript.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/InitColorSchemeScript",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Input",
+      "name": "Input",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Input",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Input.d.ts",
+        "default": "./dist/material/Input.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Input",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./InputAdornment",
+      "name": "InputAdornment",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-InputAdornment",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/InputAdornment.d.ts",
+        "default": "./dist/material/InputAdornment.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/InputAdornment",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./InputBase",
+      "name": "InputBase",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-InputBase",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/InputBase.d.ts",
+        "default": "./dist/material/InputBase.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/InputBase",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./InputLabel",
+      "name": "InputLabel",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-InputLabel",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/InputLabel.d.ts",
+        "default": "./dist/material/InputLabel.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/InputLabel",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./LinearProgress",
+      "name": "LinearProgress",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-LinearProgress",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/LinearProgress.d.ts",
+        "default": "./dist/material/LinearProgress.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/LinearProgress",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Link",
+      "name": "Link",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Link",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Link.d.ts",
+        "default": "./dist/material/Link.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Link",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./List",
+      "name": "List",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-List",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/List.d.ts",
+        "default": "./dist/material/List.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/List",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ListItem",
+      "name": "ListItem",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ListItem",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ListItem.d.ts",
+        "default": "./dist/material/ListItem.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ListItem",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ListItemAvatar",
+      "name": "ListItemAvatar",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ListItemAvatar",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ListItemAvatar.d.ts",
+        "default": "./dist/material/ListItemAvatar.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ListItemAvatar",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ListItemButton",
+      "name": "ListItemButton",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ListItemButton",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ListItemButton.d.ts",
+        "default": "./dist/material/ListItemButton.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ListItemButton",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ListItemIcon",
+      "name": "ListItemIcon",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ListItemIcon",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ListItemIcon.d.ts",
+        "default": "./dist/material/ListItemIcon.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ListItemIcon",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ListItemSecondaryAction",
+      "name": "ListItemSecondaryAction",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ListItemSecondaryAction",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ListItemSecondaryAction.d.ts",
+        "default": "./dist/material/ListItemSecondaryAction.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ListItemSecondaryAction",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ListItemText",
+      "name": "ListItemText",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ListItemText",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ListItemText.d.ts",
+        "default": "./dist/material/ListItemText.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ListItemText",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ListSubheader",
+      "name": "ListSubheader",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ListSubheader",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ListSubheader.d.ts",
+        "default": "./dist/material/ListSubheader.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ListSubheader",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Menu",
+      "name": "Menu",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Menu",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Menu.d.ts",
+        "default": "./dist/material/Menu.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Menu",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./MenuItem",
+      "name": "MenuItem",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-MenuItem",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/MenuItem.d.ts",
+        "default": "./dist/material/MenuItem.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/MenuItem",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./MenuList",
+      "name": "MenuList",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-MenuList",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/MenuList.d.ts",
+        "default": "./dist/material/MenuList.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/MenuList",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./MobileStepper",
+      "name": "MobileStepper",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-MobileStepper",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/MobileStepper.d.ts",
+        "default": "./dist/material/MobileStepper.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/MobileStepper",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Modal",
+      "name": "Modal",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Modal",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Modal.d.ts",
+        "default": "./dist/material/Modal.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Modal",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./NativeSelect",
+      "name": "NativeSelect",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-NativeSelect",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/NativeSelect.d.ts",
+        "default": "./dist/material/NativeSelect.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/NativeSelect",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./NoSsr",
+      "name": "NoSsr",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-NoSsr",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/NoSsr.d.ts",
+        "default": "./dist/material/NoSsr.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/NoSsr",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./OutlinedInput",
+      "name": "OutlinedInput",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-OutlinedInput",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/OutlinedInput.d.ts",
+        "default": "./dist/material/OutlinedInput.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/OutlinedInput",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./OverridableComponent",
+      "name": "OverridableComponent",
+      "category": "type-only",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-OverridableComponent",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/OverridableComponent.d.ts",
+        "default": "./dist/material/OverridableComponent.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/OverridableComponent",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Pagination",
+      "name": "Pagination",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Pagination",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Pagination.d.ts",
+        "default": "./dist/material/Pagination.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Pagination",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./PaginationItem",
+      "name": "PaginationItem",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-PaginationItem",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/PaginationItem.d.ts",
+        "default": "./dist/material/PaginationItem.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/PaginationItem",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Paper",
+      "name": "Paper",
+      "category": "type-only",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Paper",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Paper.d.ts",
+        "default": "./dist/material/Paper.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Paper",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./PigmentContainer",
+      "name": "PigmentContainer",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-PigmentContainer",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/PigmentContainer.d.ts",
+        "default": "./dist/material/PigmentContainer.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/PigmentContainer",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./PigmentGrid",
+      "name": "PigmentGrid",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-PigmentGrid",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/PigmentGrid.d.ts",
+        "default": "./dist/material/PigmentGrid.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/PigmentGrid",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./PigmentStack",
+      "name": "PigmentStack",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-PigmentStack",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/PigmentStack.d.ts",
+        "default": "./dist/material/PigmentStack.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/PigmentStack",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Popover",
+      "name": "Popover",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Popover",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Popover.d.ts",
+        "default": "./dist/material/Popover.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Popover",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Popper",
+      "name": "Popper",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Popper",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Popper.d.ts",
+        "default": "./dist/material/Popper.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Popper",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Portal",
+      "name": "Portal",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Portal",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Portal.d.ts",
+        "default": "./dist/material/Portal.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Portal",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Radio",
+      "name": "Radio",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Radio",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Radio.d.ts",
+        "default": "./dist/material/Radio.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Radio",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./RadioGroup",
+      "name": "RadioGroup",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-RadioGroup",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/RadioGroup.d.ts",
+        "default": "./dist/material/RadioGroup.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/RadioGroup",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Rating",
+      "name": "Rating",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Rating",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Rating.d.ts",
+        "default": "./dist/material/Rating.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Rating",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ScopedCssBaseline",
+      "name": "ScopedCssBaseline",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ScopedCssBaseline",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ScopedCssBaseline.d.ts",
+        "default": "./dist/material/ScopedCssBaseline.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ScopedCssBaseline",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Select",
+      "name": "Select",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Select",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Select.d.ts",
+        "default": "./dist/material/Select.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Select",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Skeleton",
+      "name": "Skeleton",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Skeleton",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Skeleton.d.ts",
+        "default": "./dist/material/Skeleton.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Skeleton",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Slide",
+      "name": "Slide",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Slide",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Slide.d.ts",
+        "default": "./dist/material/Slide.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Slide",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Slider",
+      "name": "Slider",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Slider",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Slider.d.ts",
+        "default": "./dist/material/Slider.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Slider",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Snackbar",
+      "name": "Snackbar",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Snackbar",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Snackbar.d.ts",
+        "default": "./dist/material/Snackbar.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Snackbar",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./SnackbarContent",
+      "name": "SnackbarContent",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-SnackbarContent",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/SnackbarContent.d.ts",
+        "default": "./dist/material/SnackbarContent.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/SnackbarContent",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./SpeedDial",
+      "name": "SpeedDial",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-SpeedDial",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/SpeedDial.d.ts",
+        "default": "./dist/material/SpeedDial.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/SpeedDial",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./SpeedDialAction",
+      "name": "SpeedDialAction",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-SpeedDialAction",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/SpeedDialAction.d.ts",
+        "default": "./dist/material/SpeedDialAction.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/SpeedDialAction",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./SpeedDialIcon",
+      "name": "SpeedDialIcon",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-SpeedDialIcon",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/SpeedDialIcon.d.ts",
+        "default": "./dist/material/SpeedDialIcon.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/SpeedDialIcon",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Stack",
+      "name": "Stack",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Stack",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Stack.d.ts",
+        "default": "./dist/material/Stack.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Stack",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Step",
+      "name": "Step",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Step",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Step.d.ts",
+        "default": "./dist/material/Step.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Step",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./StepButton",
+      "name": "StepButton",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-StepButton",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/StepButton.d.ts",
+        "default": "./dist/material/StepButton.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/StepButton",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./StepConnector",
+      "name": "StepConnector",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-StepConnector",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/StepConnector.d.ts",
+        "default": "./dist/material/StepConnector.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/StepConnector",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./StepContent",
+      "name": "StepContent",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-StepContent",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/StepContent.d.ts",
+        "default": "./dist/material/StepContent.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/StepContent",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./StepIcon",
+      "name": "StepIcon",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-StepIcon",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/StepIcon.d.ts",
+        "default": "./dist/material/StepIcon.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/StepIcon",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./StepLabel",
+      "name": "StepLabel",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-StepLabel",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/StepLabel.d.ts",
+        "default": "./dist/material/StepLabel.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/StepLabel",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Stepper",
+      "name": "Stepper",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Stepper",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Stepper.d.ts",
+        "default": "./dist/material/Stepper.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Stepper",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./SvgIcon",
+      "name": "SvgIcon",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-SvgIcon",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/SvgIcon.d.ts",
+        "default": "./dist/material/SvgIcon.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/SvgIcon",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./SwipeableDrawer",
+      "name": "SwipeableDrawer",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-SwipeableDrawer",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/SwipeableDrawer.d.ts",
+        "default": "./dist/material/SwipeableDrawer.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/SwipeableDrawer",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Switch",
+      "name": "Switch",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Switch",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Switch.d.ts",
+        "default": "./dist/material/Switch.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Switch",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Tab",
+      "name": "Tab",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Tab",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Tab.d.ts",
+        "default": "./dist/material/Tab.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Tab",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TabScrollButton",
+      "name": "TabScrollButton",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-TabScrollButton",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/TabScrollButton.d.ts",
+        "default": "./dist/material/TabScrollButton.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/TabScrollButton",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Table",
+      "name": "Table",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Table",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Table.d.ts",
+        "default": "./dist/material/Table.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Table",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TableBody",
+      "name": "TableBody",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-TableBody",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/TableBody.d.ts",
+        "default": "./dist/material/TableBody.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/TableBody",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TableCell",
+      "name": "TableCell",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-TableCell",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/TableCell.d.ts",
+        "default": "./dist/material/TableCell.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/TableCell",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TableContainer",
+      "name": "TableContainer",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-TableContainer",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/TableContainer.d.ts",
+        "default": "./dist/material/TableContainer.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/TableContainer",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TableFooter",
+      "name": "TableFooter",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-TableFooter",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/TableFooter.d.ts",
+        "default": "./dist/material/TableFooter.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/TableFooter",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TableHead",
+      "name": "TableHead",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-TableHead",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/TableHead.d.ts",
+        "default": "./dist/material/TableHead.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/TableHead",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TablePagination",
+      "name": "TablePagination",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-TablePagination",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/TablePagination.d.ts",
+        "default": "./dist/material/TablePagination.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/TablePagination",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TablePaginationActions",
+      "name": "TablePaginationActions",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-TablePaginationActions",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/TablePaginationActions.d.ts",
+        "default": "./dist/material/TablePaginationActions.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/TablePaginationActions",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TableRow",
+      "name": "TableRow",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-TableRow",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/TableRow.d.ts",
+        "default": "./dist/material/TableRow.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/TableRow",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TableSortLabel",
+      "name": "TableSortLabel",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-TableSortLabel",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/TableSortLabel.d.ts",
+        "default": "./dist/material/TableSortLabel.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/TableSortLabel",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Tabs",
+      "name": "Tabs",
+      "category": "renderable-component",
+      "classification": "enhanced",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Tabs",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Tabs.d.ts",
+        "default": "./dist/material/Tabs.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Tabs",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TextField",
+      "name": "TextField",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-TextField",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/TextField.d.ts",
+        "default": "./dist/material/TextField.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/TextField",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TextareaAutosize",
+      "name": "TextareaAutosize",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-TextareaAutosize",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/TextareaAutosize.d.ts",
+        "default": "./dist/material/TextareaAutosize.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/TextareaAutosize",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ToggleButton",
+      "name": "ToggleButton",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ToggleButton",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ToggleButton.d.ts",
+        "default": "./dist/material/ToggleButton.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ToggleButton",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./ToggleButtonGroup",
+      "name": "ToggleButtonGroup",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-ToggleButtonGroup",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/ToggleButtonGroup.d.ts",
+        "default": "./dist/material/ToggleButtonGroup.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/ToggleButtonGroup",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Toolbar",
+      "name": "Toolbar",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Toolbar",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Toolbar.d.ts",
+        "default": "./dist/material/Toolbar.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Toolbar",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Tooltip",
+      "name": "Tooltip",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Tooltip",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Tooltip.d.ts",
+        "default": "./dist/material/Tooltip.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Tooltip",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Typography",
+      "name": "Typography",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Typography",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Typography.d.ts",
+        "default": "./dist/material/Typography.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Typography",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./Zoom",
+      "name": "Zoom",
+      "category": "renderable-component",
+      "classification": "unchanged",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-Zoom",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/Zoom.d.ts",
+        "default": "./dist/material/Zoom.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/Zoom",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./className",
+      "name": "className",
+      "category": "documented-public-subpath",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-className",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/className.d.ts",
+        "default": "./dist/material/className.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/className",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./colors",
+      "name": "colors",
+      "category": "constant-or-style-helper",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-colors",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/colors.d.ts",
+        "default": "./dist/material/colors.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/colors",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./darkScrollbar",
+      "name": "darkScrollbar",
+      "category": "documented-public-subpath",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-darkScrollbar",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/darkScrollbar.d.ts",
+        "default": "./dist/material/darkScrollbar.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/darkScrollbar",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./generateUtilityClass",
+      "name": "generateUtilityClass",
+      "category": "type-only",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-generateUtilityClass",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/generateUtilityClass.d.ts",
+        "default": "./dist/material/generateUtilityClass.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/generateUtilityClass",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./generateUtilityClasses",
+      "name": "generateUtilityClasses",
+      "category": "documented-public-subpath",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-generateUtilityClasses",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/generateUtilityClasses.d.ts",
+        "default": "./dist/material/generateUtilityClasses.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/generateUtilityClasses",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./locale",
+      "name": "locale",
+      "category": "documented-public-subpath",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-locale",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/locale.d.ts",
+        "default": "./dist/material/locale.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/locale",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./styles",
+      "name": "styles",
+      "category": "constant-or-style-helper",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-styles",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/styles.d.ts",
+        "default": "./dist/material/styles.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/styles",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./themeCssVarsAugmentation",
+      "name": "themeCssVarsAugmentation",
+      "category": "documented-public-subpath",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-themeCssVarsAugmentation",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/themeCssVarsAugmentation.d.ts",
+        "default": "./dist/material/themeCssVarsAugmentation.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/themeCssVarsAugmentation",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./transitions",
+      "name": "transitions",
+      "category": "type-only",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-transitions",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/transitions.d.ts",
+        "default": "./dist/material/transitions.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/transitions",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./useAutocomplete",
+      "name": "useAutocomplete",
+      "category": "hook",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-useAutocomplete",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/useAutocomplete.d.ts",
+        "default": "./dist/material/useAutocomplete.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/useAutocomplete",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./useLazyRipple",
+      "name": "useLazyRipple",
+      "category": "hook",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-useLazyRipple",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/useLazyRipple.d.ts",
+        "default": "./dist/material/useLazyRipple.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/useLazyRipple",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./useMediaQuery",
+      "name": "useMediaQuery",
+      "category": "hook",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-useMediaQuery",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/useMediaQuery.d.ts",
+        "default": "./dist/material/useMediaQuery.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/useMediaQuery",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./usePagination",
+      "name": "usePagination",
+      "category": "hook",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-usePagination",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/usePagination.d.ts",
+        "default": "./dist/material/usePagination.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/usePagination",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./useScrollTrigger",
+      "name": "useScrollTrigger",
+      "category": "hook",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-useScrollTrigger",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/useScrollTrigger.d.ts",
+        "default": "./dist/material/useScrollTrigger.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/useScrollTrigger",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./utils",
+      "name": "utils",
+      "category": "constant-or-style-helper",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-utils",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/utils.d.ts",
+        "default": "./dist/material/utils.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/utils",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./version",
+      "name": "version",
+      "category": "documented-public-subpath",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-version",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/version.d.ts",
+        "default": "./dist/material/version.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/version",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-core",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./zero-styled",
+      "name": "zero-styled",
+      "category": "utility-or-factory",
+      "classification": "reference",
+      "route": "/v/0.1.0-alpha.2/catalog/#core-zero-styled",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/material/zero-styled.d.ts",
+        "default": "./dist/material/zero-styled.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and generated/mui-surface.json; built wrapper import",
+      "upstreamSource": "https://github.com/mui/material-ui/tree/v9.4.0/packages/mui-material/src/zero-styled",
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-components",
+      "version": "0.1.0-alpha.2",
+      "subpath": ".",
+      "name": "Root exports",
+      "category": "package-entry",
+      "classification": "original",
+      "route": "/v/0.1.0-alpha.2/catalog/#components-Root%20exports",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and published declarations",
+      "upstreamSource": null,
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-components",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./DataTable",
+      "name": "DataTable",
+      "category": "original-component",
+      "classification": "original",
+      "route": "/v/0.1.0-alpha.2/components/data-table/",
+      "example": "data-table",
+      "status": "template-ready",
+      "target": {
+        "types": "./dist/components/DataTable.d.ts",
+        "default": "./dist/components/DataTable.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and published declarations",
+      "upstreamSource": null,
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-components",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./TreeExplorer",
+      "name": "TreeExplorer",
+      "category": "original-component",
+      "classification": "original",
+      "route": "/v/0.1.0-alpha.2/catalog/#components-TreeExplorer",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/components/TreeExplorer.d.ts",
+        "default": "./dist/components/TreeExplorer.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and published declarations",
+      "upstreamSource": null,
+      "upstreamGuide": null,
+      "upstreamApi": null
+    },
+    {
+      "package": "@coderlifenet/ui-components",
+      "version": "0.1.0-alpha.2",
+      "subpath": "./DashboardLayout",
+      "name": "DashboardLayout",
+      "category": "original-component",
+      "classification": "original",
+      "route": "/v/0.1.0-alpha.2/catalog/#components-DashboardLayout",
+      "example": null,
+      "status": "reference-pending",
+      "target": {
+        "types": "./dist/components/DashboardLayout.d.ts",
+        "default": "./dist/components/DashboardLayout.js"
+      },
+      "availability": "published",
+      "evidence": "package.json exports and published declarations",
+      "upstreamSource": null,
+      "upstreamGuide": null,
+      "upstreamApi": null
+    }
+  ]
+}
