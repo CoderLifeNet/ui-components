@@ -26,7 +26,7 @@ function verifyLockfileIdentity(lockfilePath, expectedCoreIntegrity, expectedCom
   const lock = readFileSync(lockfilePath, "utf8");
   if (REGISTRY_MODE) {
     const fixture = JSON.parse(readFileSync(path.join(path.dirname(lockfilePath), "package.json"), "utf8"));
-    assert(!lock.includes("file:"), `${lockfilePath} still contains local dependencies`);
+    assert(!/\b(?:file|link|workspace):/.test(lock), `${lockfilePath} still contains local dependencies`);
     for (const name of ["@coderlifenet/ui-core", "@coderlifenet/ui-components"]) {
       assert(fixture.dependencies[name] === "0.1.0-alpha.2", `${name} must use the exact registry alpha`);
       assert(lock.includes(`'${name}@0.1.0-alpha.2':`), `${name} is not registry-locked`);

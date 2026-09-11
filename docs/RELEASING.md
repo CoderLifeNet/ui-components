@@ -1,5 +1,78 @@
 # Public alpha release
 
+## Verified release closeout (2026-09-11 UTC)
+
+- [ui-components 0.1.0-alpha.2](https://www.npmjs.com/package/@coderlifenet/ui-components/v/0.1.0-alpha.2):
+  published source `5fb2188803ce9cb11b5aa11aeb2b21c41d4da163`.
+- [Publication 34553917284](https://github.com/CoderLifeNet/ui-components/actions/runs/34553917284):
+  success, `publish-bootstrap`, after required `npm-alpha` approval.
+- [CI 34552572106](https://github.com/CoderLifeNet/ui-components/actions/runs/34552572106)
+  and [prepare 34552570085](https://github.com/CoderLifeNet/ui-components/actions/runs/34552570085): success.
+- SHA256: `e2834fc1c3ceddf28e15321c9dfd76b412fbee4359f622ed50a8f769f990b23c`.
+- Integrity: `sha512-76rINNxlpnqzLrwtHBcx5CpS2xBS+1oMBDzi38sSCYd/b+UqpHNl8R6ttoRUgPyrE6UI3XDTa915kZEvFOWLZA==`.
+- Exact published peer: `@coderlifenet/ui-core: 0.1.0-alpha.2`.
+- [ui-core 0.1.0-alpha.2](https://www.npmjs.com/package/@coderlifenet/ui-core/v/0.1.0-alpha.2):
+  source `2ffe4807ddef447fa22deb70b553a84624727cff`, successful
+  [publication 34552765075](https://github.com/CoderLifeNet/ui-core/actions/runs/34552765075).
+- Core SHA256: `0d2cbd4ed13f911a9b72332e3795bb1fac86d1c9dc2f6dcb7d4ce90e8a71f706`.
+- Core integrity: `sha512-UeuCJig/RoeyHl8+SEsUFy4moycsiNNXyJj/iSRI6lJ6iqkNZewQzWsvNk9Cxb/5XojxAyGxMYhR4+4QO2E7+Q==`.
+
+Both anonymous registry metadata and tarball downloads returned HTTP 200. Registry
+bytes match their validated prepare/publication reports. Both SLSA provenance
+subjects/digests, published source commits, main refs, repositories, workflow
+`.github/workflows/publish.yml` and each publication run's `/attempts/1` invocation
+were verified. Both `alpha` tags point to `0.1.0-alpha.2`. Neither package was republished.
+
+Registry-only consumer results (source-only temporary checkout of the published
+components commit, with the one-line browser guard correction described below):
+
+| Check | Result |
+| --- | --- |
+| Vite 5.4.21 production build | Pass |
+| Next.js 16.3.4 production build and framework TypeScript | Pass |
+| External TypeScript 7.0.2 | Pass |
+| Vite and Next Chromium root/subpath exports | Pass |
+| Boundary opt-out, consent revocation, analytics disablement | Pass in both browsers |
+| Page errors / console errors | Zero in both browsers |
+| React / MUI resolution | One React 19.2.8 and one MUI 9.4.0 version |
+| All three fixture manifests/locks | Exact registry alpha.2; no file/link/workspace protocols |
+| Clean npm consumer, npm 11.11.1 audit signatures | 90 verified registry signatures; 24 verified attestations |
+
+The browser guard originally matched `file:` inside pnpm's
+`excludeLinksFromLockfile:` setting. It now checks protocol word boundaries without
+relaxing package identity/integrity checks. The real browser check passed on registry
+locks, and negative checks injecting `file:`, `link:` and `workspace:` into a temporary
+lock each failed as required; the lock was restored after testing. The npm signature
+consumer uses a clean directory because mixing npm with an existing pnpm module tree
+caused unrelated peer-resolution errors. The separate harness reported the existing
+ESLint/TypeScript peer-range warning; this is not a claim that every dev-tool audit
+is clean. The demo Vite security fix remains as recorded below.
+
+Tag exception: `latest` currently points to `0.1.0-alpha.2` on BOTH packages.
+Core's value remained unchanged during this publication/closeout. Components had
+no tags before first publication, so its `latest` did NOT remain absent/unchanged.
+The workflow requested `--tag alpha`; the extra tag's cause is not established.
+The prior core tag-removal attempt returned npm E403. No tags were changed during
+closeout. A scope-authorized maintainer must resolve this policy exception without
+republishing/unpublishing either package. Use exact versions or `@alpha` meanwhile.
+
+Trusted publishing is NOT verified for either package. Follow the exact
+[core trusted-publishing handoff](https://github.com/CoderLifeNet/ui-core/blob/main/docs/RELEASING.md#trusted-publishing-handoff):
+GitHub owner `CoderLifeNet`, repository `ui-components` for this package (`ui-core`
+for core), workflow filename `publish.yml`, environment `npm-alpha`, direct
+`npm publish` explicitly allowed. Keep all GitHub approval protections. Verify both
+saved configurations; prove tokenless publication on a separately authorized NEW
+version with `publish-oidc`, not by republishing alpha.2. Bootstrap provenance alone
+does not establish this trust. Both bootstrap secrets/token(s) remain retained;
+resolve the tag disposition and verify the trust transition before retirement.
+No credentials were exposed, replaced or revoked.
+
+Published-source SHAs above remain the release records; closeout documentation and
+the smoke guard correction are subsequent commits, not replacement artifacts.
+External reports/tarballs and history backup remain intact; the backup SHA256 is
+`7a3082eb2ee42cfe31d3fe6bb4bef91d448fa15dbaf56c592bc5dbcae2ae7b74`.
+Documentation-site planning belongs to coderlife.net PR #20 and is outside this closeout.
+
 Protected publication and dry-run now use the same pinned core release inspector
 and absolute-tarball-path helper. The helper checks that the `.tgz` exists before
 invoking npm, avoiding npm 11's GitHub-shorthand parsing of bare `artifacts/...`.
@@ -48,9 +121,9 @@ Do not revoke the token or remove either secret until BOTH publications succeed.
 Afterwards configure each actual npm package's trusted publisher and verify that
 configuration separately; a bootstrap publication is not proof of trusted publishing.
 
-Proposed first publication: `@coderlifenet/ui-components@0.1.0-alpha.2`, public,
-dist-tag `alpha` only, with exact peer `@coderlifenet/ui-core@0.1.0-alpha.2`.
-Publish and registry-verify core first. This repository never publishes on push.
+Published: `@coderlifenet/ui-components@0.1.0-alpha.2`, public, with exact peer
+`@coderlifenet/ui-core@0.1.0-alpha.2`. See the tag exception in the closeout above.
+Core was published and registry-verified first. This repository never publishes on push.
 
 ## Prerequisites and authentication
 
@@ -59,7 +132,8 @@ On 2026-09-10 npm authenticated `chrishacia`; `npm org ls coderlifenet chrishaci
 Authenticated package and exact 0.1.0-alpha.2 lookups returned 404 for both new names,
 with no visible versions or tags. Permission is proven by membership, not by 404s.
 Recheck version availability before publication. Local login does not authenticate
-Actions; neither npm-alpha environment had NPM_BOOTSTRAP_TOKEN at verification.
+Actions; both npm-alpha environments had NPM_BOOTSTRAP_TOKEN for publication and
+retain it pending the trusted-publishing handoff.
 
 All pre-rename artifact hashes and approval records are superseded. They belong
 to different package identities and must never be published. Approve only the
@@ -72,8 +146,8 @@ repository `ui-components`, workflow `publish.yml`, environment `npm-alpha`, and
 allow direct `npm publish`. Prefer this tokenless `publish-oidc` mode once package
 settings exist. First publication may use `publish-bootstrap` with a short-lived,
 scope-limited granular token with package read-write and bypass 2FA, entered directly
-as GitHub environment secret `NPM_BOOTSTRAP_TOKEN`. Revoke/delete it after configuring
-OIDC. Both modes require provenance. No token has been created by this preparation.
+as GitHub environment secret `NPM_BOOTSTRAP_TOKEN`. Follow the verified trust and
+token-retirement handoff above. Both modes require provenance.
 
 Official npm guidance rechecked on 2026-09-10 still supports bypass-2FA granular
 tokens for direct package publication, but not account-governance operations or
@@ -148,8 +222,10 @@ npm pkg delete devDependencies.@coderlifenet/ui-core
 pnpm install --no-frozen-lockfile --registry=https://registry.npmjs.org/
 pnpm exec playwright install chromium
 node scripts/check-consumer-browser.mjs --registry
-npm install --prefix consumers/external-check --package-lock-only --ignore-scripts --registry=https://registry.npmjs.org/
-npm audit signatures --prefix consumers/external-check
+signatures=$(mktemp -d /tmp/coderlife-registry-signatures-XXXXXX)
+cp consumers/external-check/package.json "$signatures/package.json"
+npm install --prefix "$signatures" --ignore-scripts --no-audit --no-fund --registry=https://registry.npmjs.org/
+npm exec --yes --package=npm@11.11.1 -- npm audit signatures --prefix "$signatures" --registry=https://registry.npmjs.org/
 ```
 
 This uses source-only temporary fixtures, preserves explicit baseline versions,
@@ -157,4 +233,6 @@ and changes only CoderLife inputs to exact registry dependencies. The browser
 checker verifies registry SHA512 identities before running the same rendering,
 root/subpath, opt-out, consent and disabled-runtime assertions. Confirm one React
 19.2.8 and MUI 9.4.0 version in the dependency reports. Remove the temporary smoke
-directory after reviewing results. These registry checks cannot pass before publication.
+and signature directories after reviewing results. These checks require published
+packages. Do not generate an npm lock inside the pnpm-managed fixture; use the
+separate clean npm installation above.
