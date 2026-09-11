@@ -1,5 +1,45 @@
 # Public alpha release
 
+## Prepublication security disposition
+
+The reported high-severity audit result was the demo's direct development
+dependency `docs/demo-app -> vite@7.1.3` (also shared by
+`@vitejs/plugin-react@5.0.4`). The high-severity upstream advisories are:
+
+- [GHSA-v2wj-q39q-566r](https://github.com/vitejs/vite/security/advisories/GHSA-v2wj-q39q-566r):
+  query-based `server.fs.deny` bypass, affected 7.1.0 through 7.3.1; fixed in 7.3.2.
+- [GHSA-p9ff-h696-f583](https://github.com/vitejs/vite/security/advisories/GHSA-p9ff-h696-f583):
+  arbitrary file read through development-server WebSocket `fetchModule`, affected
+  7.0.0 through 7.3.1; fixed in 7.3.2.
+- [GHSA-fx2h-pf6j-xcff](https://github.com/vitejs/vite/security/advisories/GHSA-fx2h-pf6j-xcff):
+  Windows alternate-path `server.fs.deny` bypass, affected 7.0.0 through 7.3.4;
+  fixed in 7.3.5.
+
+These advisories concern reachable Vite development servers and disclosure of
+server-side files, with additional Windows/filesystem conditions for the last
+advisory. The demo is private and excluded from both package allowlists. Neither
+packed library depends on Vite. Acceptance uses production builds and loopback
+`vite preview`, not the vulnerable development-server endpoints; the publishing
+job does not install or run the demo. The separate Vite 5 consumer compatibility
+fixture remains unchanged; this is not a claim that every tooling audit is clean.
+
+The demo now pins compatible Vite 7.3.6. Only Vite and its required esbuild family
+changed in its lockfile. `npm ci --ignore-scripts`, production demo build, and
+`npm audit --json` passed; the demo lock audit reported zero vulnerabilities,
+including the five additional low/moderate Vite advisories in the original report.
+Library functionality and runtime dependency versions are unchanged.
+
+This demo-only fix advances components' release source commit and requires a fresh
+CI/prepare record. The previous components source approval is superseded even if
+the tarball bytes remain identical, because demo files are excluded from packing.
+Core's source and artifact approval remain unchanged. Compare each new run's
+artifact hashes before approving the protected publishing job.
+
+Bootstrap-secret metadata has now been verified in BOTH npm-alpha environments.
+Do not revoke the token or remove either secret until BOTH publications succeed.
+Afterwards configure each actual npm package's trusted publisher and verify that
+configuration separately; a bootstrap publication is not proof of trusted publishing.
+
 Proposed first publication: `@coderlifenet/ui-components@0.1.0-alpha.2`, public,
 dist-tag `alpha` only, with exact peer `@coderlifenet/ui-core@0.1.0-alpha.2`.
 Publish and registry-verify core first. This repository never publishes on push.
