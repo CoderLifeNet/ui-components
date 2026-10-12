@@ -11,7 +11,7 @@ Advanced components built on top of `@coderlifenet/ui-core` public APIs only.
 ## Install
 
 ```bash
-pnpm add @coderlifenet/ui-components@0.1.0-alpha.2 @coderlifenet/ui-core@0.1.0-alpha.2 @mui/material@9.4.0 @emotion/react@11.14.0 @emotion/styled@11.14.1 react@19.2.8 react-dom@19.2.8
+pnpm add @coderlifenet/ui-components@0.2.0-alpha.0 @coderlifenet/ui-core@0.2.0-alpha.0 @mui/material@9.4.0 @emotion/react@11.14.0 @emotion/styled@11.14.1 react@19.2.8 react-dom@19.2.8
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ import { DataTable, TreeExplorer, DashboardLayout } from "@coderlifenet/ui-compo
 - Consumer-provided children/slots (toolbar actions, header/sidebar slots, dashboard body content) still track normally unless a consumer ancestor opts out.
 - TreeExplorer semantic events no longer auto-promote node identifiers into tracking semantic IDs.
 
-These integration APIs are candidate branch behavior pending review and are not yet published in npm `0.1.0-alpha.2`.
+These integration APIs are candidate branch behavior pending review and are not yet published in npm `0.2.0-alpha.0`.
 
 ## Candidate Validation Workflow
 

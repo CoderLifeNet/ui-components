@@ -1,6 +1,6 @@
 {
   "name": "@coderlifenet/ui-components",
-  "version": "0.1.0-alpha.2",
+  "version": "0.2.0-alpha.0",
   "description": "Advanced components built on @coderlifenet/ui-core.",
   "repository": {
     "type": "git",
@@ -57,7 +57,7 @@
     }
   },
   "peerDependencies": {
-    "@coderlifenet/ui-core": "0.1.0-alpha.2",
+    "@coderlifenet/ui-core": "0.2.0-alpha.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "react": "^19.2.8",
@@ -72,7 +72,7 @@
     "@mui/material": "9.4.0"
   },
   "devDependencies": {
-    "@coderlifenet/ui-core": "file:../ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz",
+    "@coderlifenet/ui-core": "file:../ui-core/artifacts/coderlifenet-ui-core-0.2.0-alpha.0.tgz",
     "@changesets/changelog-github": "1.0.1",
     "@changesets/cli": "3.0.2",
     "@testing-library/jest-dom": "6.9.0",
