@@ -145,18 +145,19 @@ export function DashboardLayout({
           {breadcrumbs.length > 0 ? (
             <Breadcrumbs aria-label="Breadcrumb">
               {breadcrumbs.map((item) => (
-                <Link
-                  key={item.id}
-                  href={item.href ?? "#"}
-                  onClick={(event) => {
-                    if (!item.href) {
-                      event.preventDefault();
-                    }
-                    item.onNavigate?.();
-                  }}
-                >
-                  {item.label}
-                </Link>
+                <TrackingBoundary key={item.id} id="dashboard-layout-breadcrumb-item" optOut={semanticTrackingOnly}>
+                  <Link
+                    href={item.href ?? "#"}
+                    onClick={(event) => {
+                      if (!item.href) {
+                        event.preventDefault();
+                      }
+                      item.onNavigate?.();
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                </TrackingBoundary>
               ))}
             </Breadcrumbs>
           ) : null}

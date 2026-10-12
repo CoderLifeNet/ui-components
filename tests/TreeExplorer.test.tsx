@@ -104,6 +104,7 @@ describe("TreeExplorer", () => {
 
     await user.click(screen.getByRole("treeitem", { name: /Customer/ }));
     const selectionEvent = memory.read().find((entry) => entry.type === "ui.tree.selection_change");
+    expect(selectionEvent).toBeTruthy();
     expect(selectionEvent?.semanticId).toBeUndefined();
   });
 });

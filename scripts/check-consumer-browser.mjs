@@ -10,6 +10,9 @@ const ROOT = process.cwd();
 const DEFAULT_VITE_PORT = 4173;
 const DEFAULT_NEXT_PORT = 4180;
 const REGISTRY_MODE = process.argv.includes("--registry");
+const componentsManifest = JSON.parse(readFileSync(path.resolve(ROOT, "package.json"), "utf8"));
+const COMPONENTS_VERSION = componentsManifest.version;
+const CORE_VERSION = componentsManifest.peerDependencies["@coderlifenet/ui-core"];
 
 function sha512Base64(filePath) {
   const data = readFileSync(filePath);
@@ -28,26 +31,27 @@ function verifyLockfileIdentity(lockfilePath, expectedCoreIntegrity, expectedCom
     const fixture = JSON.parse(readFileSync(path.join(path.dirname(lockfilePath), "package.json"), "utf8"));
     assert(!/\b(?:file|link|workspace):/.test(lock), `${lockfilePath} still contains local dependencies`);
     for (const name of ["@coderlifenet/ui-core", "@coderlifenet/ui-components"]) {
-      assert(fixture.dependencies[name] === "0.1.0-alpha.2", `${name} must use the exact registry alpha`);
-      assert(lock.includes(`'${name}@0.1.0-alpha.2':`), `${name} is not registry-locked`);
+      const expectedVersion = name === "@coderlifenet/ui-core" ? CORE_VERSION : COMPONENTS_VERSION;
+      assert(fixture.dependencies[name] === expectedVersion, `${name} must use the exact registry alpha`);
+      assert(lock.includes(`'${name}@${expectedVersion}':`), `${name} is not registry-locked`);
     }
   } else {
     assert(
-      lock.includes("file:../../../ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz"),
-      `${lockfilePath} is not pinned to ui-core alpha.2 tarball`
+      lock.includes(`file:../../../ui-core/artifacts/coderlifenet-ui-core-${CORE_VERSION}.tgz`),
+      `${lockfilePath} is not pinned to ui-core candidate tarball`
     );
     assert(
-      lock.includes("file:../../artifacts/coderlifenet-ui-components-0.1.0-alpha.2.tgz"),
-      `${lockfilePath} is not pinned to ui-components alpha.2 tarball`
+      lock.includes(`file:../../artifacts/coderlifenet-ui-components-${COMPONENTS_VERSION}.tgz`),
+      `${lockfilePath} is not pinned to ui-components candidate tarball`
     );
   }
   assert(
     lock.includes(`sha512-${expectedCoreIntegrity}`),
-    `${lockfilePath} integrity does not match ui-core alpha.2 tarball bytes`
+    `${lockfilePath} integrity does not match ui-core candidate tarball bytes`
   );
   assert(
     lock.includes(`sha512-${expectedComponentsIntegrity}`),
-    `${lockfilePath} integrity does not match ui-components alpha.2 tarball bytes`
+    `${lockfilePath} integrity does not match ui-components candidate tarball bytes`
   );
 }
 
@@ -258,14 +262,15 @@ function terminate(child) {
 }
 
 async function main() {
-  const coreTarball = path.resolve(ROOT, "../ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz");
-  const componentsTarball = path.resolve(ROOT, "artifacts/coderlifenet-ui-components-0.1.0-alpha.2.tgz");
+  const coreTarball = path.resolve(ROOT, `../ui-core/artifacts/coderlifenet-ui-core-${CORE_VERSION}.tgz`);
+  const componentsTarball = path.resolve(ROOT, `artifacts/coderlifenet-ui-components-${COMPONENTS_VERSION}.tgz`);
 
   async function registryIntegrity(name) {
-    const response = await fetch(`https://registry.npmjs.org/${encodeURIComponent(name)}/0.1.0-alpha.2`);
+    const expectedVersion = name === "@coderlifenet/ui-core" ? CORE_VERSION : COMPONENTS_VERSION;
+    const response = await fetch(`https://registry.npmjs.org/${encodeURIComponent(name)}/${expectedVersion}`);
     assert(response.ok, `Registry package unavailable: ${name} (${response.status})`);
     const metadata = await response.json();
-    assert(metadata.version === "0.1.0-alpha.2", `Unexpected version: ${name}`);
+    assert(metadata.version === expectedVersion, `Unexpected version: ${name}`);
     assert(metadata.dist.integrity.startsWith("sha512-"), `Missing SHA512 registry integrity: ${name}`);
     return metadata.dist.integrity.slice(7);
   }
@@ -318,11 +323,15 @@ async function main() {
       console.log(JSON.stringify({
         artifacts: {
           core: {
-            tarball: REGISTRY_MODE ? "@coderlifenet/ui-core@0.1.0-alpha.2 (npm registry)" : "ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz",
+            tarball: REGISTRY_MODE
+              ? `@coderlifenet/ui-core@${CORE_VERSION} (npm registry)`
+              : `ui-core/artifacts/coderlifenet-ui-core-${CORE_VERSION}.tgz`,
             integrity: `sha512-${coreIntegrity}`
           },
           components: {
-            tarball: REGISTRY_MODE ? "@coderlifenet/ui-components@0.1.0-alpha.2 (npm registry)" : "ui-components/artifacts/coderlifenet-ui-components-0.1.0-alpha.2.tgz",
+            tarball: REGISTRY_MODE
+              ? `@coderlifenet/ui-components@${COMPONENTS_VERSION} (npm registry)`
+              : `ui-components/artifacts/coderlifenet-ui-components-${COMPONENTS_VERSION}.tgz`,
             integrity: `sha512-${componentsIntegrity}`
           }
         },

@@ -76,6 +76,7 @@ describe("DashboardLayout", () => {
         <DashboardLayout
           title="Tracked"
           defaultSidebarOpen={false}
+          breadcrumbs={[{ id: "docs", label: "Docs" }]}
           navigationItems={[{ id: "reports", label: "Reports" }]}
         >
           <div>Body</div>
@@ -85,6 +86,7 @@ describe("DashboardLayout", () => {
 
     await user.click(screen.getByRole("button", { name: "Open navigation" }));
     await user.click(screen.getByText("Reports"));
+    await user.click(screen.getByText("Docs"));
 
     const types = memory.read().map((entry) => entry.type);
     expect(types).toContain("ui.dashboard.sidebar_toggle");
@@ -139,8 +141,8 @@ describe("DashboardLayout", () => {
     await user.click(screen.getByRole("button", { name: "Open navigation" }));
     await user.click(screen.getByRole("button", { name: "Sidebar Slot" }));
 
-    const types = memory.read().map((entry) => entry.type);
-    expect(types).toContain("ui.button.click");
-    expect(types).toContain("ui.dashboard.sidebar_toggle");
+    const buttonClickCount = memory.read().filter((entry) => entry.type === "ui.button.click").length;
+    expect(buttonClickCount).toBeGreaterThanOrEqual(2);
+    expect(memory.read().map((entry) => entry.type)).toContain("ui.dashboard.sidebar_toggle");
   });
 });

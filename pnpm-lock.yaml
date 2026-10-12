@@ -31,8 +31,8 @@ importers:
         specifier: 3.0.2
         version: 3.0.2
       '@coderlifenet/ui-core':
-        specifier: file:../ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz
-        version: file:../ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: file:../ui-core/artifacts/coderlifenet-ui-core-0.2.0-alpha.0.tgz
+        version: file:../ui-core/artifacts/coderlifenet-ui-core-0.2.0-alpha.0.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@testing-library/jest-dom':
         specifier: 6.9.0
         version: 6.9.0
@@ -209,9 +209,9 @@ packages:
     resolution: {integrity: sha512-y7/yvZ2TPAnR9+jnc00klvNNLkJiXFFrQA/hlLCcxA9a2A4zQIOimyFQ9XfwYKiGD1fb5GY8vbKIIgO8d5Tb2A==}
     engines: {node: '>= 20.12.0'}
 
-  '@coderlifenet/ui-core@file:../ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz':
-    resolution: {integrity: sha512-2JGGXu7nq5llJB5mbp+SfEMeMFu2prJbyoSTFMlI1yjQEdAwim5xoTKwc9HpGd1+H5B7z5h8O0QJzk3mafrHuA==, tarball: file:../ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz}
-    version: 0.1.0-alpha.2
+  '@coderlifenet/ui-core@file:../ui-core/artifacts/coderlifenet-ui-core-0.2.0-alpha.0.tgz':
+    resolution: {integrity: sha512-jcLMm428qqpxWn6v+m/U0oIVXNL1BPdjUzF2gRekNg/n2gjOwOfHHEn9QJddOSnlGINlVgLxknkBeATHV+8gbw==, tarball: file:../ui-core/artifacts/coderlifenet-ui-core-0.2.0-alpha.0.tgz}
+    version: 0.2.0-alpha.0
     peerDependencies:
       '@emotion/react': ^11.14.0
       '@emotion/styled': ^11.14.1
@@ -1076,6 +1076,7 @@ packages:
   eslint@9.35.0:
     resolution: {integrity: sha512-QePbBFMJFjgmlE+cXAlbHZbHpdFVS2E/6vzCy7aKlebddvl1vadiC4JFV5u/wqTkNUwEV8WrQi257jf5f06hrg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -2084,7 +2085,7 @@ snapshots:
       fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
 
-  '@coderlifenet/ui-core@file:../ui-core/artifacts/coderlifenet-ui-core-0.1.0-alpha.2.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@coderlifenet/ui-core@file:../ui-core/artifacts/coderlifenet-ui-core-0.2.0-alpha.0.tgz(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@mui/material@9.4.0(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.2.2)(react@19.2.8)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.8))(@types/react@19.2.2)(react@19.2.8)
