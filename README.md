@@ -45,6 +45,19 @@ Use fresh local candidate bytes from source before consumer checks:
 
 Consumer lockfiles may be rewritten during local artifact install checks; treat those lockfile edits as transient verification output and keep PR diffs limited to durable library sources/tests/docs.
 
+## Executable Demo Fixture
+
+- Source: `consumers/vite-app/src/App.tsx`
+- Includes: stable runtime update pattern, StrictMode render, consent/enablement controls, scope boundaries, explicit file-input emit, ui-components content, and in-memory event inspector.
+- Run: `pnpm check:consumers`
+
+## Stacked Dependency
+
+- Current PR stack order:
+	1. `ui-core` PR #2 (`feat/analytics-integration-completion` -> `main`)
+	2. `ui-components` PR #3 (`feat/analytics-integration-completion` -> `feat/ui-documentation-foundation`)
+- Merge order is `ui-core` first, then `ui-components`.
+
 ## Notes
 
 - This package does not claim MUI X Pro/Premium compatibility.

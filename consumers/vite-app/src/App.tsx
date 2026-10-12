@@ -3,11 +3,33 @@ import { Button } from "@coderlifenet/ui-core";
 import SubpathButton from "@coderlifenet/ui-core/Button";
 import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlifenet/ui-core/analytics";
 import { TrackingBoundary, UIExtensionsProvider, createAnalyticsExtension } from "@coderlifenet/ui-core/extensions";
+import { useEmitUIEvent } from "@coderlifenet/ui-core/instrumentation";
+import { DataTable } from "@coderlifenet/ui-components";
+
+function FileInputEvent() {
+  const emit = useEmitUIEvent();
+  return (
+    <input
+      aria-label="attachment"
+      data-testid="file-input"
+      type="file"
+      onChange={() =>
+        emit({
+          type: "ui.file_picker.change",
+          action: "change",
+          component: "FilePicker",
+          metadata: { source: "vite-consumer-demo" }
+        })
+      }
+    />
+  );
+}
 
 export function App() {
   const [enabled, setEnabled] = useState(true);
   const [consentGranted, setConsentGranted] = useState(true);
   const [eventCount, setEventCount] = useState(0);
+  const [inspectorPayload, setInspectorPayload] = useState("[]");
 
   const memory = useMemo(() => createMemoryAdapter(), []);
   const runtime = useMemo(
@@ -34,7 +56,9 @@ export function App() {
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setEventCount(memory.read().length);
+      const events = memory.read();
+      setEventCount(events.length);
+      setInspectorPayload(JSON.stringify(events.slice(-8), null, 2));
     }, 50);
 
     return () => {
@@ -42,13 +66,22 @@ export function App() {
     };
   }, [memory]);
 
+  const scopeEvents = [
+    "ui.button.click",
+    "ui.select.change",
+    "ui.file_picker.change",
+    "ui.text_field.change",
+    "ui.text_field.blur"
+  ];
+
   return (
     <UIExtensionsProvider initialConfig={{ enabled: true }} extensions={[createAnalyticsExtension(runtime)]}>
       <div style={{ padding: 24, fontFamily: "sans-serif" }}>
-        <h1>Vite Smoke</h1>
+        <h1>Vite Analytics Consumer Demo</h1>
         <p>
           Event count: <span data-testid="event-count">{eventCount}</span>
         </p>
+        <p data-testid="scope-config">Selected scope events: {scopeEvents.join(", ")}</p>
 
         <label style={{ display: "block", marginBottom: 8 }}>
           <input
@@ -70,19 +103,45 @@ export function App() {
           Consent granted
         </label>
 
-        <div style={{ display: "flex", gap: 12 }}>
-          <Button data-testid="root-button" variant="contained">
-            Root Button
-          </Button>
-          <SubpathButton data-testid="subpath-button" variant="outlined">
-            Subpath Button
-          </SubpathButton>
+        <TrackingBoundary id="app" semanticId="vite-consumer" metadata={{ surface: "demo" }}>
+          <TrackingBoundary id="controls" events={scopeEvents}>
+            <div style={{ display: "flex", gap: 12, marginBottom: 16 }}>
+              <Button data-testid="root-button" variant="contained">
+                Root Button
+              </Button>
+              <SubpathButton data-testid="subpath-button" variant="outlined">
+                Subpath Button
+              </SubpathButton>
+              <FileInputEvent />
+            </div>
+          </TrackingBoundary>
+
           <TrackingBoundary id="private-section" optOut>
             <Button data-testid="optout-button" variant="contained">
               Opted-Out Button
             </Button>
           </TrackingBoundary>
-        </div>
+
+          <div style={{ marginTop: 16 }}>
+            <DataTable
+              rows={[
+                { id: "1", name: "Ava", role: "Admin" },
+                { id: "2", name: "Niko", role: "Editor" }
+              ]}
+              columns={[
+                { id: "name", header: "Name", accessor: (row) => row.name },
+                { id: "role", header: "Role", accessor: (row) => row.role }
+              ]}
+              getRowId={(row) => row.id}
+              toolbarActions={<Button>Consumer Toolbar Action</Button>}
+            />
+          </div>
+        </TrackingBoundary>
+
+        <h2 style={{ marginTop: 24 }}>In-memory Event Inspector</h2>
+        <pre data-testid="event-inspector" style={{ background: "#f5f5f5", padding: 12, borderRadius: 8 }}>
+          {inspectorPayload}
+        </pre>
       </div>
     </UIExtensionsProvider>
   );
