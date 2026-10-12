@@ -196,7 +196,7 @@ the correct repository URL. Publication uses `--tag alpha --access public
 
 ## Post-publication registry smoke checks
 
-For both packages, run `npm view <package>@0.1.0-alpha.2 version dist.integrity
+For both packages, run `npm view <package>@0.2.0-alpha.0 version dist.integrity
 dist.attestations repository --json` and `npm view <package> dist-tags --json`.
 Compare registry integrity with the approved workflow report, confirm public
 access, alpha points to the intended version, and latest remains absent/unchanged.
@@ -209,8 +209,8 @@ git archive HEAD | tar -x -C "$smoke"
 cd "$smoke"
 for fixture in vite-app next-app external-check; do
   npm pkg set --prefix "consumers/$fixture" \
-    'dependencies.@coderlifenet/ui-core=0.1.0-alpha.2' \
-    'dependencies.@coderlifenet/ui-components=0.1.0-alpha.2'
+    'dependencies.@coderlifenet/ui-core=0.2.0-alpha.0' \
+    'dependencies.@coderlifenet/ui-components=0.2.0-alpha.0'
   pnpm --dir "consumers/$fixture" install --no-frozen-lockfile --registry=https://registry.npmjs.org/
 done
 pnpm --dir consumers/vite-app build

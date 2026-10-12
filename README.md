@@ -33,7 +33,7 @@ import { DataTable, TreeExplorer, DashboardLayout } from "@coderlifenet/ui-compo
 - Consumer-provided children/slots (toolbar actions, header/sidebar slots, dashboard body content) still track normally unless a consumer ancestor opts out.
 - TreeExplorer semantic events no longer auto-promote node identifiers into tracking semantic IDs.
 
-These integration APIs are candidate branch behavior pending review and are not yet published in npm `0.2.0-alpha.0`.
+These integration APIs are introduced in the coordinated `0.2.0-alpha.0` release line and later.
 
 ## Candidate Validation Workflow
 
@@ -50,13 +50,6 @@ Consumer lockfiles may be rewritten during local artifact install checks; treat 
 - Source: `consumers/vite-app/src/App.tsx`
 - Includes: stable runtime update pattern, StrictMode render, consent/enablement controls, scope boundaries, explicit file-input emit, ui-components content, and in-memory event inspector.
 - Run: `pnpm check:consumers`
-
-## Stacked Dependency
-
-- Current PR stack order:
-	1. `ui-core` PR #2 (`feat/analytics-integration-completion` -> `main`)
-	2. `ui-components` PR #3 (`feat/analytics-integration-completion` -> `feat/ui-documentation-foundation`)
-- Merge order is `ui-core` first, then `ui-components`.
 
 ## Notes
 

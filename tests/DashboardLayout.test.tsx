@@ -142,7 +142,8 @@ describe("DashboardLayout", () => {
     await user.click(screen.getByRole("button", { name: "Sidebar Slot" }));
 
     const buttonClickCount = memory.read().filter((entry) => entry.type === "ui.button.click").length;
-    expect(buttonClickCount).toBeGreaterThanOrEqual(2);
-    expect(memory.read().map((entry) => entry.type)).toContain("ui.dashboard.sidebar_toggle");
+    const sidebarToggleCount = memory.read().filter((entry) => entry.type === "ui.dashboard.sidebar_toggle").length;
+    expect(buttonClickCount).toBe(2);
+    expect(sidebarToggleCount).toBe(1);
   });
 });
