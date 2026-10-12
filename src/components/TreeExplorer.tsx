@@ -89,11 +89,7 @@ export function TreeExplorer({
     } else {
       setInternalSelectedId(next);
     }
-    emit(
-      next
-        ? { type: "ui.tree.selection_change", action: "select", component: "TreeExplorer", semanticId: next }
-        : { type: "ui.tree.selection_change", action: "select", component: "TreeExplorer" }
-    );
+    emit({ type: "ui.tree.selection_change", action: "select", component: "TreeExplorer" });
   };
 
   const toggleNode = (node: TreeExplorerNode): void => {

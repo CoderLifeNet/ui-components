@@ -59,6 +59,17 @@ export function DashboardLayout({
   const [internalSidebarOpen, setInternalSidebarOpen] = useState(defaultSidebarOpen);
   const activeSidebarOpen = sidebarOpen ?? internalSidebarOpen;
 
+  const wrapOwnedControl = (node: UINode): UINode => {
+    if (!semanticTrackingOnly) {
+      return node;
+    }
+    return (
+      <TrackingBoundary id="dashboard-layout-owned-control" optOut>
+        {node}
+      </TrackingBoundary>
+    );
+  };
+
   const setOpen = (next: boolean): void => {
     if (onSidebarOpenChange) {
       onSidebarOpenChange(next);
@@ -72,25 +83,25 @@ export function DashboardLayout({
     <Box component="nav" aria-label="Primary">
       <Stack spacing={1} sx={{ p: 2 }}>
         {navigationItems.map((item) => (
-          <Link
-            key={item.id}
-            href={item.href ?? "#"}
-            underline="hover"
-            onClick={(event) => {
-              if (!item.href) {
-                event.preventDefault();
-              }
-              item.onNavigate?.();
-              emit({
-                type: "ui.dashboard.navigate",
-                action: "navigate",
-                component: "DashboardLayout",
-                semanticId: item.id
-              });
-            }}
-          >
-            {item.label}
-          </Link>
+          <TrackingBoundary key={item.id} id="dashboard-layout-nav-item" optOut={semanticTrackingOnly}>
+            <Link
+              href={item.href ?? "#"}
+              underline="hover"
+              onClick={(event) => {
+                if (!item.href) {
+                  event.preventDefault();
+                }
+                item.onNavigate?.();
+                emit({
+                  type: "ui.dashboard.navigate",
+                  action: "navigate",
+                  component: "DashboardLayout"
+                });
+              }}
+            >
+              {item.label}
+            </Link>
+          </TrackingBoundary>
         ))}
         {sidebar}
       </Stack>
@@ -101,9 +112,11 @@ export function DashboardLayout({
     <Box sx={{ minHeight: "100vh", display: "grid", gridTemplateRows: "auto 1fr" }}>
       <AppBar position="sticky" color="default" elevation={0}>
         <Toolbar>
-          <IconButton edge="start" aria-label="Open navigation" onClick={() => setOpen(!activeSidebarOpen)}>
-            <Typography variant="button">Menu</Typography>
-          </IconButton>
+          {wrapOwnedControl(
+            <IconButton edge="start" aria-label="Open navigation" onClick={() => setOpen(!activeSidebarOpen)}>
+              <Typography variant="button">Menu</Typography>
+            </IconButton>
+          )}
           <Typography variant="h6" sx={{ ml: 1, flexGrow: 1 }}>
             {title}
           </Typography>
@@ -132,18 +145,19 @@ export function DashboardLayout({
           {breadcrumbs.length > 0 ? (
             <Breadcrumbs aria-label="Breadcrumb">
               {breadcrumbs.map((item) => (
-                <Link
-                  key={item.id}
-                  href={item.href ?? "#"}
-                  onClick={(event) => {
-                    if (!item.href) {
-                      event.preventDefault();
-                    }
-                    item.onNavigate?.();
-                  }}
-                >
-                  {item.label}
-                </Link>
+                <TrackingBoundary key={item.id} id="dashboard-layout-breadcrumb-item" optOut={semanticTrackingOnly}>
+                  <Link
+                    href={item.href ?? "#"}
+                    onClick={(event) => {
+                      if (!item.href) {
+                        event.preventDefault();
+                      }
+                      item.onNavigate?.();
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                </TrackingBoundary>
               ))}
             </Breadcrumbs>
           ) : null}
@@ -153,13 +167,5 @@ export function DashboardLayout({
     </Box>
   );
 
-  if (!semanticTrackingOnly) {
-    return content;
-  }
-
-  return (
-    <TrackingBoundary id="dashboard-layout-internal" optOut>
-      {content}
-    </TrackingBoundary>
-  );
+  return content;
 }

@@ -3,6 +3,7 @@ import { userEvent } from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 import { UIExtensionsProvider, createAnalyticsExtension } from "@coderlifenet/ui-core/extensions";
 import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlifenet/ui-core/analytics";
+import { Button } from "@coderlifenet/ui-core";
 import { DashboardLayout } from "../src/components/DashboardLayout.js";
 
 describe("DashboardLayout", () => {
@@ -75,6 +76,7 @@ describe("DashboardLayout", () => {
         <DashboardLayout
           title="Tracked"
           defaultSidebarOpen={false}
+          breadcrumbs={[{ id: "docs", label: "Docs" }]}
           navigationItems={[{ id: "reports", label: "Reports" }]}
         >
           <div>Body</div>
@@ -84,11 +86,64 @@ describe("DashboardLayout", () => {
 
     await user.click(screen.getByRole("button", { name: "Open navigation" }));
     await user.click(screen.getByText("Reports"));
+    await user.click(screen.getByText("Docs"));
 
     const types = memory.read().map((entry) => entry.type);
     expect(types).toContain("ui.dashboard.sidebar_toggle");
     expect(types).toContain("ui.dashboard.navigate");
     expect(types).not.toContain("ui.icon_button.click");
     expect(types).not.toContain("ui.link.click");
+  });
+
+  it("preserves tracking for consumer children with semanticTrackingOnly default", async () => {
+    const user = userEvent.setup();
+    const memory = createMemoryAdapter();
+    const runtime = createAnalyticsRuntime([memory], {
+      enabled: true,
+      consent: { analyticsStorage: "granted", adStorage: "denied" }
+    });
+
+    render(
+      <UIExtensionsProvider initialConfig={{ enabled: true }} extensions={[createAnalyticsExtension(runtime)]}>
+        <DashboardLayout title="Tracked Content" navigationItems={[]} defaultSidebarOpen={false}>
+          <Button>Child Action</Button>
+        </DashboardLayout>
+      </UIExtensionsProvider>
+    );
+
+    await user.click(screen.getByRole("button", { name: "Child Action" }));
+    expect(memory.read().map((entry) => entry.type)).toContain("ui.button.click");
+  });
+
+  it("preserves tracking for header and sidebar consumer slots", async () => {
+    const user = userEvent.setup();
+    const memory = createMemoryAdapter();
+    const runtime = createAnalyticsRuntime([memory], {
+      enabled: true,
+      consent: { analyticsStorage: "granted", adStorage: "denied" }
+    });
+
+    render(
+      <UIExtensionsProvider initialConfig={{ enabled: true }} extensions={[createAnalyticsExtension(runtime)]}>
+        <DashboardLayout
+          title="Tracked Slots"
+          defaultSidebarOpen={false}
+          headerEnd={<Button>Header Slot</Button>}
+          sidebar={<Button>Sidebar Slot</Button>}
+          navigationItems={[]}
+        >
+          <div>Body</div>
+        </DashboardLayout>
+      </UIExtensionsProvider>
+    );
+
+    await user.click(screen.getByRole("button", { name: "Header Slot" }));
+    await user.click(screen.getByRole("button", { name: "Open navigation" }));
+    await user.click(screen.getByRole("button", { name: "Sidebar Slot" }));
+
+    const buttonClickCount = memory.read().filter((entry) => entry.type === "ui.button.click").length;
+    const sidebarToggleCount = memory.read().filter((entry) => entry.type === "ui.dashboard.sidebar_toggle").length;
+    expect(buttonClickCount).toBe(2);
+    expect(sidebarToggleCount).toBe(1);
   });
 });

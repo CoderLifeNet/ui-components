@@ -1,6 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
+import { UIExtensionsProvider, createAnalyticsExtension } from "@coderlifenet/ui-core/extensions";
+import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlifenet/ui-core/analytics";
 import { TreeExplorer } from "../src/components/TreeExplorer.js";
 
 describe("TreeExplorer", () => {
@@ -84,5 +86,25 @@ describe("TreeExplorer", () => {
     expect(item).toHaveAttribute("aria-expanded", "false");
     expect(onExpandedIdsChange).not.toHaveBeenCalled();
     expect(onSelectedIdChange).not.toHaveBeenCalled();
+  });
+
+  it("does not promote node IDs into semantic event identity", async () => {
+    const user = userEvent.setup();
+    const memory = createMemoryAdapter();
+    const runtime = createAnalyticsRuntime([memory], {
+      enabled: true,
+      consent: { analyticsStorage: "granted", adStorage: "denied" }
+    });
+
+    render(
+      <UIExtensionsProvider initialConfig={{ enabled: true }} extensions={[createAnalyticsExtension(runtime)]}>
+        <TreeExplorer nodes={[{ id: "customer-42", label: "Customer" }]} />
+      </UIExtensionsProvider>
+    );
+
+    await user.click(screen.getByRole("treeitem", { name: /Customer/ }));
+    const selectionEvent = memory.read().find((entry) => entry.type === "ui.tree.selection_change");
+    expect(selectionEvent).toBeTruthy();
+    expect(selectionEvent?.semanticId).toBeUndefined();
   });
 });

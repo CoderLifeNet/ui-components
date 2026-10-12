@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           repository: CoderLifeNet/ui-core
-          ref: 2ffe4807ddef447fa22deb70b553a84624727cff
+          ref: 8e9466b44818f66af481e273ca262d9ccdb7685a
           path: ui-core
           persist-credentials: false
       - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1
@@ -60,7 +60,7 @@ jobs:
         with:
           name: npm-alpha-${{ github.sha }}
           path: |
-            ui-components/artifacts/coderlifenet-ui-components-0.1.0-alpha.2.tgz
+            ui-components/artifacts/coderlifenet-ui-components-*.tgz
             ui-components/artifacts/release.json
           if-no-files-found: error
           retention-days: 30
@@ -84,7 +84,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           repository: CoderLifeNet/ui-core
-          ref: 2ffe4807ddef447fa22deb70b553a84624727cff
+          ref: 8e9466b44818f66af481e273ca262d9ccdb7685a
           path: ui-core
           persist-credentials: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020

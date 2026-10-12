@@ -8,6 +8,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
+const packageVersion = JSON.parse(readFileSync(path.join(root, "package.json"), "utf8")).version;
 const directories = process.argv.includes("--root")
   ? ["."]
   : ["consumers/vite-app", "consumers/next-app", "consumers/external-check"];
@@ -22,7 +23,7 @@ for (const relative of directories) {
     const bytes = readFileSync(tarball);
     const packed = JSON.parse(execFileSync("tar", ["-xOf", tarball, "package/package.json"], { encoding: "utf8" }));
     assert.equal(packed.name, name);
-    assert.equal(packed.version, "0.1.0-alpha.2");
+    assert.equal(packed.version, packageVersion);
     for (const section of ["dependencies", "devDependencies", "peerDependencies", "optionalDependencies"]) {
       for (const version of Object.values(packed[section] ?? {})) {
         assert.ok(!/^(file:|link:|workspace:|\/)/.test(version), `Nonportable packed dependency in ${name}`);
