@@ -26,6 +26,25 @@ import { DataTable, TreeExplorer, DashboardLayout } from "@coderlifenet/ui-compo
 - TreeExplorer: typed hierarchical nodes, controlled/uncontrolled expansion and selection, keyboard support.
 - DashboardLayout: responsive shell with header/sidebar/navigation/breadcrumb slots and mobile drawer behavior.
 
+## Tracking Integration Notes
+
+- `semanticTrackingOnly` defaults to `true` for `DataTable` and `DashboardLayout`.
+- Owned internal controls suppress primitive duplicate events while semantic component events remain emitted.
+- Consumer-provided children/slots (toolbar actions, header/sidebar slots, dashboard body content) still track normally unless a consumer ancestor opts out.
+- TreeExplorer semantic events no longer auto-promote node identifiers into tracking semantic IDs.
+
+These integration APIs are candidate branch behavior pending review and are not yet published in npm `0.1.0-alpha.2`.
+
+## Candidate Validation Workflow
+
+Use fresh local candidate bytes from source before consumer checks:
+
+1. In `ui-core`: `pnpm pack:local`
+2. In `ui-components`: `pnpm pack:local`
+3. In `ui-components`: `pnpm check:consumers && pnpm check:external-consumer`
+
+Consumer lockfiles may be rewritten during local artifact install checks; treat those lockfile edits as transient verification output and keep PR diffs limited to durable library sources/tests/docs.
+
 ## Notes
 
 - This package does not claim MUI X Pro/Premium compatibility.
