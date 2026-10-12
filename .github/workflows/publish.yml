@@ -95,7 +95,10 @@ jobs:
         with:
           name: npm-alpha-${{ github.sha }}
           path: ui-components/artifacts/
-      - run: node ../ui-core/scripts/check-release.mjs --verify-only --available --require-core
+      - run: node ../ui-core/scripts/check-release.mjs --verify-only --available
+      - name: Verify exact core alpha exists before components publish
+        run: |
+          node -e "const version=require('./package.json').version;fetch('https://registry.npmjs.org/@coderlifenet%2fui-core/'+version).then(r=>{if(r.status!==200){throw new Error('Publish the exact core alpha first')}return r.json()}).then(j=>{if(j.version!==version){throw new Error('Core version mismatch')}console.log(JSON.stringify({core:'@coderlifenet/ui-core',version:j.version},null,2))})"
       - name: Publish the validated tarball under alpha only
         env:
           NODE_AUTH_TOKEN: ${{ inputs.mode == 'publish-bootstrap' && secrets.NPM_BOOTSTRAP_TOKEN || '' }}
