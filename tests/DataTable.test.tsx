@@ -3,6 +3,7 @@ import { userEvent } from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 import { UIExtensionsProvider, createAnalyticsExtension } from "@coderlifenet/ui-core/extensions";
 import { createAnalyticsRuntime, createMemoryAdapter } from "@coderlifenet/ui-core/analytics";
+import { Button } from "@coderlifenet/ui-core";
 import { DataTable } from "../src/components/DataTable.js";
 
 interface Row {
@@ -173,5 +174,61 @@ describe("DataTable", () => {
     const types = memory.read().map((entry) => entry.type);
     expect(types).toContain("ui.table.selection_change");
     expect(types).not.toContain("ui.checkbox.change");
+  });
+
+  it("keeps tracking enabled for consumer toolbar actions", async () => {
+    const user = userEvent.setup();
+    const memory = createMemoryAdapter();
+    const runtime = createAnalyticsRuntime([memory], {
+      enabled: true,
+      consent: { analyticsStorage: "granted", adStorage: "denied" }
+    });
+
+    render(
+      <UIExtensionsProvider initialConfig={{ enabled: true }} extensions={[createAnalyticsExtension(runtime)]}>
+        <DataTable
+          rows={rows}
+          columns={columns}
+          getRowId={(row) => row.id}
+          toolbarActions={<Button>Consumer Action</Button>}
+        />
+      </UIExtensionsProvider>
+    );
+
+    await user.click(screen.getByRole("button", { name: "Consumer Action" }));
+    expect(memory.read().map((entry) => entry.type)).toContain("ui.button.click");
+  });
+
+  it("keeps tracking enabled for custom cell renderers", async () => {
+    const user = userEvent.setup();
+    const memory = createMemoryAdapter();
+    const runtime = createAnalyticsRuntime([memory], {
+      enabled: true,
+      consent: { analyticsStorage: "granted", adStorage: "denied" }
+    });
+
+    render(
+      <UIExtensionsProvider initialConfig={{ enabled: true }} extensions={[createAnalyticsExtension(runtime)]}>
+        <DataTable
+          rows={rows}
+          columns={[
+            {
+              id: "action",
+              header: "Action",
+              accessor: () => <Button>Row Action</Button>
+            }
+          ]}
+          getRowId={(row) => row.id}
+        />
+      </UIExtensionsProvider>
+    );
+
+    const actions = screen.getAllByRole("button", { name: "Row Action" });
+    const firstAction = actions[0];
+    if (!firstAction) {
+      throw new Error("Expected at least one row action button");
+    }
+    await user.click(firstAction);
+    expect(memory.read().map((entry) => entry.type)).toContain("ui.button.click");
   });
 });

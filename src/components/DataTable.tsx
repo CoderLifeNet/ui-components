@@ -107,6 +107,17 @@ export function DataTable<TRow>({
   const activeFilter = filterQuery ?? internalFilter;
   const activeSelectedRowIds = selectedRowIds ?? internalSelectedRowIds;
 
+  const wrapOwnedControl = (node: UINode): UINode => {
+    if (!semanticTrackingOnly) {
+      return node;
+    }
+    return (
+      <TrackingBoundary id="datatable-owned-control" optOut>
+        {node}
+      </TrackingBoundary>
+    );
+  };
+
   const filteredRows = useMemo(() => {
     if (serverMode) {
       return rows;
@@ -204,8 +215,7 @@ export function DataTable<TRow>({
     emit({
       type: "ui.table.filter_change",
       action: "filter",
-      component: "DataTable",
-      metadata: { queryLength: next.length }
+      component: "DataTable"
     });
   };
 
@@ -230,23 +240,27 @@ export function DataTable<TRow>({
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             Data Table
           </Typography>
-          <TextField
-            size="small"
-            label="Filter"
-            value={activeFilter}
-            onChange={(event) => setFilterValue(event.target.value)}
-          />
+          {wrapOwnedControl(
+            <TextField
+              size="small"
+              label="Filter"
+              value={activeFilter}
+              onChange={(event) => setFilterValue(event.target.value)}
+            />
+          )}
           {toolbarActions}
           {onRefresh ? (
-            <IconButton
-              aria-label="Refresh table"
-              onClick={() => {
-                onRefresh();
-                emit({ type: "ui.table.refresh", action: "refresh", component: "DataTable" });
-              }}
-            >
-              <Typography variant="caption">R</Typography>
-            </IconButton>
+            wrapOwnedControl(
+              <IconButton
+                aria-label="Refresh table"
+                onClick={() => {
+                  onRefresh();
+                  emit({ type: "ui.table.refresh", action: "refresh", component: "DataTable" });
+                }}
+              >
+                <Typography variant="caption">R</Typography>
+              </IconButton>
+            )
           ) : null}
         </Stack>
       </Toolbar>
@@ -258,17 +272,19 @@ export function DataTable<TRow>({
           <TableHead>
             <TableRow>
               <TableCell padding="checkbox">
-                <Checkbox
-                  slotProps={{ input: { "aria-label": "Select all rows" } }}
-                  checked={allSelected}
-                  onChange={(event) => {
-                    if (event.target.checked) {
-                      setSelectionValue(pagedRows.map((row) => getRowId(row)));
-                    } else {
-                      setSelectionValue([]);
-                    }
-                  }}
-                />
+                {wrapOwnedControl(
+                  <Checkbox
+                    slotProps={{ input: { "aria-label": "Select all rows" } }}
+                    checked={allSelected}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setSelectionValue(pagedRows.map((row) => getRowId(row)));
+                      } else {
+                        setSelectionValue([]);
+                      }
+                    }}
+                  />
+                )}
               </TableCell>
               {columns.map((column) => {
                 const isSorted = activeSort?.columnId === column.id;
@@ -315,16 +331,18 @@ export function DataTable<TRow>({
                 return (
                   <TableRow hover key={rowId} selected={checked}>
                     <TableCell padding="checkbox">
-                      <Checkbox
-                        slotProps={{ input: { "aria-label": `Select row ${rowId}` } }}
-                        checked={checked}
-                        onChange={(event) => {
-                          const next = event.target.checked
-                            ? [...activeSelectedRowIds, rowId]
-                            : activeSelectedRowIds.filter((id) => id !== rowId);
-                          setSelectionValue(next);
-                        }}
-                      />
+                      {wrapOwnedControl(
+                        <Checkbox
+                          slotProps={{ input: { "aria-label": `Select row ${rowId}` } }}
+                          checked={checked}
+                          onChange={(event) => {
+                            const next = event.target.checked
+                              ? [...activeSelectedRowIds, rowId]
+                              : activeSelectedRowIds.filter((id) => id !== rowId);
+                            setSelectionValue(next);
+                          }}
+                        />
+                      )}
                     </TableCell>
                     {columns.map((column) => (
                       <TableCell key={column.id} align={column.align ?? "left"}>
@@ -351,13 +369,5 @@ export function DataTable<TRow>({
     </Paper>
   );
 
-  if (!semanticTrackingOnly) {
-    return content;
-  }
-
-  return (
-    <TrackingBoundary id="datatable-internal" optOut>
-      {content}
-    </TrackingBoundary>
-  );
+  return content;
 }
