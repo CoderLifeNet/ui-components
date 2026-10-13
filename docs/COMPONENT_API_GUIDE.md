@@ -208,7 +208,7 @@ function WorkflowTemplateBuilder({ appSettings, formSettings, values, onValueCha
 									label={field.label}
 									name={field.fieldKey}
 									required={field.required}
-									type={field.kind === "number" ? "number" : "text"}
+									type={field.kind}
 									value={values[field.fieldKey] ?? ""}
 									onChange={(event) => onValueChange(field.fieldKey, event.target.value)}
 									slotProps={{ input: { "aria-label": field.a11yLabel } }}
