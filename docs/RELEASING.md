@@ -2,9 +2,9 @@
 
 ## Current npm-verified versions (2026-10-12 UTC)
 
-- `@coderlifenet/ui-components`: `alpha -> 0.1.0-alpha.2`, `latest -> 0.1.0-alpha.2`.
+- `@coderlifenet/ui-components`: `alpha -> 0.2.0-alpha.0`, `latest -> 0.1.0-alpha.2`.
 - `@coderlifenet/ui-core`: `alpha -> 0.2.0-alpha.0`, `latest -> 0.1.0-alpha.2`.
-- Components `0.2.0-alpha.0` remains pending publication while this documentation update is in progress.
+- Both packages now publish `0.2.0-alpha.0` under `alpha` with npm attestations.
 
 ## Verified release closeout (2026-09-11 UTC)
 
@@ -27,7 +27,8 @@ Both anonymous registry metadata and tarball downloads returned HTTP 200. Regist
 bytes match their validated prepare/publication reports. Both SLSA provenance
 subjects/digests, published source commits, main refs, repositories, workflow
 `.github/workflows/publish.yml` and each publication run's `/attempts/1` invocation
-were verified. Both `alpha` tags point to `0.1.0-alpha.2`. Neither package was republished.
+were verified. At this closeout checkpoint, both `alpha` tags pointed to
+`0.1.0-alpha.2`. Neither package was republished during that closeout window.
 
 Registry-only consumer results (source-only temporary checkout of the published
 components commit, with the one-line browser guard correction described below):
@@ -54,7 +55,7 @@ caused unrelated peer-resolution errors. The separate harness reported the exist
 ESLint/TypeScript peer-range warning; this is not a claim that every dev-tool audit
 is clean. The demo Vite security fix remains as recorded below.
 
-Tag exception: `latest` currently points to `0.1.0-alpha.2` on BOTH packages.
+Historical tag exception (2026-09-11 closeout): `latest` pointed to `0.1.0-alpha.2` on BOTH packages.
 Core's value remained unchanged during this publication/closeout. Components had
 no tags before first publication, so its `latest` did NOT remain absent/unchanged.
 The workflow requested `--tag alpha`; the extra tag's cause is not established.

@@ -19,78 +19,161 @@
 - Mobile drawer behavior and controlled/uncontrolled sidebar state
 - Router-neutral navigation callbacks
 
-## Integration Example: TrackForge App Surface
+## Integration Example: TrackForge Ordinary App Controls (ui-core)
 
-Use `DashboardLayout` and `DataTable` for TrackForge app surfaces like asset lists,
-inspection queues, and navigation shells.
+TrackForge applies `@coderlifenet/ui-core` wrappers across ordinary controls
+throughout the app. This does not require replacing existing shell/tables with
+`@coderlifenet/ui-components`.
 
 ```tsx
-import { DashboardLayout, DataTable, type DataTableColumn } from "@coderlifenet/ui-components";
+import { Button, Checkbox, FormControlLabel, MenuItem, Stack, TextField } from "@coderlifenet/ui-core";
 
-type WorkOrderRow = {
-	id: string;
-	jobCode: string;
-	status: "open" | "in_progress" | "done";
-};
-
-const columns: DataTableColumn<WorkOrderRow>[] = [
-	{ id: "jobCode", header: "Job", accessor: (row) => row.jobCode },
-	{ id: "status", header: "Status", accessor: (row) => row.status }
-];
-
-export function TrackForgeWorkOrders({ rows }: { rows: WorkOrderRow[] }) {
+export function TrackForgeAssetFilters() {
 	return (
-		<DashboardLayout
-			title="TrackForge"
-			navigationItems={[{ id: "work-orders", label: "Work Orders", href: "/work-orders" }]}
-			breadcrumbs={[{ id: "home", label: "Home", href: "/" }, { id: "work-orders", label: "Work Orders" }]}
-		>
-			<DataTable rows={rows} columns={columns} getRowId={(row) => row.id} />
-		</DashboardLayout>
+		<Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+			<TextField
+				label="Asset Name"
+				name="assetName"
+				size="small"
+				slotProps={{ input: { "aria-label": "Filter by asset name" } }}
+			/>
+			<TextField
+				select
+				label="Status"
+				name="status"
+				size="small"
+				slotProps={{ input: { "aria-label": "Filter by status" } }}
+			>
+				<MenuItem value="open">Open</MenuItem>
+				<MenuItem value="in_progress">In Progress</MenuItem>
+				<MenuItem value="done">Done</MenuItem>
+			</TextField>
+			<FormControlLabel control={<Checkbox name="assignedToMe" />} label="Assigned to me" />
+			<Button type="submit">Apply</Button>
+		</Stack>
 	);
 }
 ```
 
 ## Integration Example: Form Builder For User-Created Workflows
 
-Keep TrackForge's ordinary app forms as-is. Use a separate builder-style surface
-only for user-created workflow templates.
+This is an integration pattern, not a reusable form-builder engine implementation.
+Keep TrackForge's ordinary app forms on their existing path.
 
 ```tsx
-import { useState } from "react";
-import { Box, Button, MenuItem, Stack, TextField, Typography } from "@coderlifenet/ui-core";
+import { useMemo, useState } from "react";
+import { Box, MenuItem, Stack, TextField, Typography } from "@coderlifenet/ui-core";
+import { createMemoryAdapter } from "@coderlifenet/ui-core/analytics";
+import { createAnalyticsRuntime } from "@coderlifenet/ui-core/analytics";
+import { TrackingBoundary, UIExtensionsProvider, createAnalyticsExtension } from "@coderlifenet/ui-core/extensions";
+
+type PersistedBoundarySettings = {
+	id: string;
+	semanticId?: string;
+	optOut?: boolean;
+	events?: string[];
+	metadata?: Record<string, string>;
+};
 
 type WorkflowField = {
 	id: string;
 	label: string;
 	kind: "text" | "number" | "date";
+	required?: boolean;
+	a11yLabel: string;
 };
 
-export function WorkflowFormBuilder() {
-	const [fields, setFields] = useState<WorkflowField[]>([]);
+const appBoundary: PersistedBoundarySettings = {
+	id: "trackforge-app",
+	semanticId: "trackforge",
+	metadata: { area: "workflow-builder" }
+};
+
+const formBoundary: PersistedBoundarySettings = {
+	id: "workflow-template-form",
+	semanticId: "workflow-template",
+	events: ["ui.text_field.change", "ui.text_field.blur", "ui.select.change"]
+};
+
+const fields: WorkflowField[] = [
+	{ id: "templateName", label: "Template Name", kind: "text", required: true, a11yLabel: "Workflow template name" },
+	{ id: "ownerTeam", label: "Owner Team", kind: "text", a11yLabel: "Owner team" },
+	{ id: "escalationWindow", label: "Escalation Window", kind: "number", a11yLabel: "Escalation window in hours" }
+];
+
+export function WorkflowTemplateBuilderIntegration() {
+	const [values, setValues] = useState<Record<string, string>>({
+		templateName: "",
+		ownerTeam: "",
+		escalationWindow: ""
+	});
+
+	const analyticsRuntime = useMemo(
+		() =>
+			createAnalyticsRuntime([createMemoryAdapter()], {
+				enabled: true,
+				consent: { analyticsStorage: "granted", adStorage: "denied" }
+			}),
+		[]
+	);
 
 	return (
-		<Stack spacing={2}>
-			<Typography variant="h6">Workflow Form Builder</Typography>
-			<Button
-				onClick={() =>
-					setFields((prev) => [...prev, { id: `field-${prev.length + 1}`, label: "New field", kind: "text" }])
-				}
+		<UIExtensionsProvider initialConfig={{ enabled: true }} extensions={[createAnalyticsExtension(analyticsRuntime)]}>
+			<TrackingBoundary
+				id={appBoundary.id}
+				semanticId={appBoundary.semanticId}
+				metadata={appBoundary.metadata}
+				optOut={appBoundary.optOut}
 			>
-				Add Field
-			</Button>
+				<TrackingBoundary
+					id={formBoundary.id}
+					semanticId={formBoundary.semanticId}
+					metadata={formBoundary.metadata}
+					optOut={formBoundary.optOut}
+					events={formBoundary.events}
+				>
+					<Stack spacing={2}>
+						<Typography variant="h6">Workflow Template Builder</Typography>
+						{fields.map((field) => (
+							<TrackingBoundary key={field.id} id={`field-${field.id}`} semanticId={field.id}>
+								<TextField
+									label={field.label}
+									name={field.id}
+									required={field.required}
+									value={values[field.id] ?? ""}
+									type={field.kind === "number" ? "number" : "text"}
+									onChange={(event) =>
+										setValues((prev) => ({
+											...prev,
+											[field.id]: event.target.value
+										}))
+									}
+									slotProps={{ input: { "aria-label": field.a11yLabel } }}
+								/>
+							</TrackingBoundary>
+						))}
 
-			{fields.map((field) => (
-				<Box key={field.id} sx={{ display: "grid", gap: 1, gridTemplateColumns: "2fr 1fr" }}>
-					<TextField label="Field Label" value={field.label} size="small" />
-					<TextField select label="Field Type" value={field.kind} size="small">
-						<MenuItem value="text">Text</MenuItem>
-						<MenuItem value="number">Number</MenuItem>
-						<MenuItem value="date">Date</MenuItem>
-					</TextField>
-				</Box>
-			))}
-		</Stack>
+						<TextField
+							select
+							label="Default Priority"
+							name="defaultPriority"
+							value={values.defaultPriority ?? "normal"}
+							onChange={(event) =>
+								setValues((prev) => ({
+									...prev,
+									defaultPriority: event.target.value
+								}))
+							}
+							slotProps={{ input: { "aria-label": "Default priority" } }}
+						>
+							<MenuItem value="low">Low</MenuItem>
+							<MenuItem value="normal">Normal</MenuItem>
+							<MenuItem value="high">High</MenuItem>
+						</TextField>
+					</Stack>
+				</TrackingBoundary>
+			</TrackingBoundary>
+		</UIExtensionsProvider>
 	);
 }
 ```
