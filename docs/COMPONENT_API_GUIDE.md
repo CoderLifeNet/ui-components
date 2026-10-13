@@ -60,9 +60,13 @@ export function TrackForgeAssetFilters() {
 This is an integration pattern, not a reusable form-builder engine implementation.
 Keep TrackForge's ordinary app forms on their existing path.
 
+The standalone host owns the single analytics runtime and `UIExtensionsProvider`.
+The embedded builder receives persisted form and field tracking settings and maps
+each level to `TrackingBoundary` without creating another provider.
+
 ```tsx
 import { useMemo, useState } from "react";
-import { Box, MenuItem, Stack, TextField, Typography } from "@coderlifenet/ui-core";
+import { MenuItem, Stack, TextField, Typography } from "@coderlifenet/ui-core";
 import { createMemoryAdapter } from "@coderlifenet/ui-core/analytics";
 import { createAnalyticsRuntime } from "@coderlifenet/ui-core/analytics";
 import { TrackingBoundary, UIExtensionsProvider, createAnalyticsExtension } from "@coderlifenet/ui-core/extensions";
@@ -75,37 +79,154 @@ type PersistedBoundarySettings = {
 	metadata?: Record<string, string>;
 };
 
-type WorkflowField = {
-	id: string;
-	label: string;
-	kind: "text" | "number" | "date";
-	required?: boolean;
+type PersistedFieldTrackingSettings = PersistedBoundarySettings & {
+	fieldKey: string;
 	a11yLabel: string;
+	kind: "text" | "number" | "date" | "select";
+	label: string;
+	required?: boolean;
+	selectOptions?: readonly { value: string; label: string }[];
+};
+
+type PersistedFormTrackingSettings = PersistedBoundarySettings & {
+	fields: readonly PersistedFieldTrackingSettings[];
 };
 
 const appBoundary: PersistedBoundarySettings = {
 	id: "trackforge-app",
 	semanticId: "trackforge",
-	metadata: { area: "workflow-builder" }
+	metadata: {
+		area: "workflow-builder",
+		surface: "template-management"
+	}
 };
 
-const formBoundary: PersistedBoundarySettings = {
+const formBoundary: PersistedFormTrackingSettings = {
 	id: "workflow-template-form",
 	semanticId: "workflow-template",
-	events: ["ui.text_field.change", "ui.text_field.blur", "ui.select.change"]
+	metadata: {
+		formType: "workflow-template",
+		productArea: "trackforge"
+	},
+	events: ["ui.text_field.change", "ui.text_field.blur", "ui.select.change"],
+	fields: [
+		{
+			fieldKey: "templateName",
+			id: "field-template-name",
+			semanticId: "template-name",
+			metadata: { section: "identity", kind: "text" },
+			events: ["ui.text_field.change", "ui.text_field.blur"],
+			optOut: false,
+			kind: "text",
+			label: "Template Name",
+			required: true,
+			a11yLabel: "Workflow template name"
+		},
+		{
+			fieldKey: "ownerTeam",
+			id: "field-owner-team",
+			semanticId: "owner-team",
+			metadata: { section: "ownership", kind: "text" },
+			events: ["ui.text_field.change", "ui.text_field.blur"],
+			optOut: false,
+			kind: "text",
+			label: "Owner Team",
+			a11yLabel: "Owner team"
+		},
+		{
+			fieldKey: "defaultPriority",
+			id: "field-default-priority",
+			semanticId: "default-priority",
+			metadata: { section: "behavior", kind: "select" },
+			events: ["ui.select.change"],
+			optOut: false,
+			kind: "select",
+			label: "Default Priority",
+			a11yLabel: "Default priority",
+			selectOptions: [
+				{ value: "low", label: "Low" },
+				{ value: "normal", label: "Normal" },
+				{ value: "high", label: "High" }
+			]
+		}
+	]
 };
 
-const fields: WorkflowField[] = [
-	{ id: "templateName", label: "Template Name", kind: "text", required: true, a11yLabel: "Workflow template name" },
-	{ id: "ownerTeam", label: "Owner Team", kind: "text", a11yLabel: "Owner team" },
-	{ id: "escalationWindow", label: "Escalation Window", kind: "number", a11yLabel: "Escalation window in hours" }
-];
+type BuilderValues = Record<string, string>;
 
-export function WorkflowTemplateBuilderIntegration() {
+type WorkflowTemplateBuilderProps = {
+	appSettings: PersistedBoundarySettings;
+	formSettings: PersistedFormTrackingSettings;
+	values: BuilderValues;
+	onValueChange: (fieldKey: string, nextValue: string) => void;
+};
+
+function WorkflowTemplateBuilder({ appSettings, formSettings, values, onValueChange }: WorkflowTemplateBuilderProps) {
+	return (
+		<TrackingBoundary
+			id={appSettings.id}
+			semanticId={appSettings.semanticId}
+			metadata={appSettings.metadata}
+			optOut={appSettings.optOut}
+			events={appSettings.events}
+		>
+			<TrackingBoundary
+				id={formSettings.id}
+				semanticId={formSettings.semanticId}
+				metadata={formSettings.metadata}
+				optOut={formSettings.optOut}
+				events={formSettings.events}
+			>
+				<Stack spacing={2}>
+					<Typography variant="h6">Workflow Template Builder</Typography>
+					{formSettings.fields.map((field) => (
+						<TrackingBoundary
+							key={field.id}
+							id={field.id}
+							semanticId={field.semanticId}
+							metadata={field.metadata}
+							optOut={field.optOut}
+							events={field.events}
+						>
+							{field.kind === "select" ? (
+								<TextField
+									select
+									label={field.label}
+									name={field.fieldKey}
+									value={values[field.fieldKey] ?? ""}
+									onChange={(event) => onValueChange(field.fieldKey, event.target.value)}
+									slotProps={{ input: { "aria-label": field.a11yLabel } }}
+								>
+									{field.selectOptions?.map((option) => (
+										<MenuItem key={option.value} value={option.value}>
+											{option.label}
+										</MenuItem>
+									))}
+								</TextField>
+							) : (
+								<TextField
+									label={field.label}
+									name={field.fieldKey}
+									required={field.required}
+									type={field.kind === "number" ? "number" : "text"}
+									value={values[field.fieldKey] ?? ""}
+									onChange={(event) => onValueChange(field.fieldKey, event.target.value)}
+									slotProps={{ input: { "aria-label": field.a11yLabel } }}
+								/>
+							)}
+						</TrackingBoundary>
+					))}
+				</Stack>
+			</TrackingBoundary>
+		</TrackingBoundary>
+	);
+}
+
+export function WorkflowTemplateBuilderHost() {
 	const [values, setValues] = useState<Record<string, string>>({
 		templateName: "",
 		ownerTeam: "",
-		escalationWindow: ""
+		defaultPriority: "normal"
 	});
 
 	const analyticsRuntime = useMemo(
@@ -119,61 +240,23 @@ export function WorkflowTemplateBuilderIntegration() {
 
 	return (
 		<UIExtensionsProvider initialConfig={{ enabled: true }} extensions={[createAnalyticsExtension(analyticsRuntime)]}>
-			<TrackingBoundary
-				id={appBoundary.id}
-				semanticId={appBoundary.semanticId}
-				metadata={appBoundary.metadata}
-				optOut={appBoundary.optOut}
-			>
-				<TrackingBoundary
-					id={formBoundary.id}
-					semanticId={formBoundary.semanticId}
-					metadata={formBoundary.metadata}
-					optOut={formBoundary.optOut}
-					events={formBoundary.events}
-				>
-					<Stack spacing={2}>
-						<Typography variant="h6">Workflow Template Builder</Typography>
-						{fields.map((field) => (
-							<TrackingBoundary key={field.id} id={`field-${field.id}`} semanticId={field.id}>
-								<TextField
-									label={field.label}
-									name={field.id}
-									required={field.required}
-									value={values[field.id] ?? ""}
-									type={field.kind === "number" ? "number" : "text"}
-									onChange={(event) =>
-										setValues((prev) => ({
-											...prev,
-											[field.id]: event.target.value
-										}))
-									}
-									slotProps={{ input: { "aria-label": field.a11yLabel } }}
-								/>
-							</TrackingBoundary>
-						))}
-
-						<TextField
-							select
-							label="Default Priority"
-							name="defaultPriority"
-							value={values.defaultPriority ?? "normal"}
-							onChange={(event) =>
-								setValues((prev) => ({
-									...prev,
-									defaultPriority: event.target.value
-								}))
-							}
-							slotProps={{ input: { "aria-label": "Default priority" } }}
-						>
-							<MenuItem value="low">Low</MenuItem>
-							<MenuItem value="normal">Normal</MenuItem>
-							<MenuItem value="high">High</MenuItem>
-						</TextField>
-					</Stack>
-				</TrackingBoundary>
-			</TrackingBoundary>
+			<WorkflowTemplateBuilder
+				appSettings={appBoundary}
+				formSettings={formBoundary}
+				values={values}
+				onValueChange={(fieldKey, nextValue) =>
+					setValues((prev) => ({
+						...prev,
+						[fieldKey]: nextValue
+					}))
+				}
+			/>
 		</UIExtensionsProvider>
 	);
 }
 ```
+
+Notes:
+
+- `events` allowlists intersect across nested boundaries. A field event is delivered only if both parent form/app and field-level selections allow it.
+- Keep field values/content out of `metadata`. Use static classification metadata only (section/kind/surface), not user-entered data.

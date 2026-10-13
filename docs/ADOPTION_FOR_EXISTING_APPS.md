@@ -55,8 +55,7 @@ pnpm pack:local
 
 # install and run the demo fixture from local tarballs
 cd docs/demo-app
-rm -rf node_modules package-lock.json
-npm install --ignore-scripts --no-audit --no-fund
+npm ci --ignore-scripts --no-audit --no-fund
 npm run build
 npm run dev
 ```
@@ -65,3 +64,6 @@ Notes:
 
 - This workflow requires `ui-core` and `ui-components` as sibling folders so file-based tarball paths resolve exactly.
 - `npm run build` was re-verified during this docs update on the pinned `0.2.0-alpha.0` local tarballs.
+- If `npm ci` fails, treat it as a lockfile/path drift signal:
+	1. verify sibling paths and rerun both `pnpm pack:local` commands;
+	2. if `docs/demo-app/package-lock.json` is stale after intentional path/version updates, regenerate it once with `npm install --package-lock-only --ignore-scripts --no-audit --no-fund`, commit that lockfile fix, then rerun the exact documented `npm ci` and `npm run build` commands.
