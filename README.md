@@ -8,11 +8,17 @@ Advanced components built on top of `@coderlifenet/ui-core` public APIs only.
 - `TreeExplorer`
 - `DashboardLayout`
 
-## Install
+## Install (npm-verified today)
 
 ```bash
-pnpm add @coderlifenet/ui-components@0.2.0-alpha.0 @coderlifenet/ui-core@0.2.0-alpha.0 @mui/material@9.4.0 @emotion/react@11.14.0 @emotion/styled@11.14.1 react@19.2.8 react-dom@19.2.8
+pnpm add @coderlifenet/ui-components@0.1.0-alpha.2 @coderlifenet/ui-core@0.1.0-alpha.2 @mui/material@9.4.0 @emotion/react@11.14.0 @emotion/styled@11.14.1 react@19.2.8 react-dom@19.2.8
 ```
+
+Version snapshot (2026-10-12):
+
+- `@coderlifenet/ui-components`: `alpha` and `latest` both resolve to `0.1.0-alpha.2`.
+- `@coderlifenet/ui-core`: `alpha` resolves to `0.2.0-alpha.0`, `latest` resolves to `0.1.0-alpha.2`.
+- Coordinated `0.2.0-alpha.0` usage requires local source artifacts until components publish completes.
 
 ## Usage
 
@@ -33,9 +39,9 @@ import { DataTable, TreeExplorer, DashboardLayout } from "@coderlifenet/ui-compo
 - Consumer-provided children/slots (toolbar actions, header/sidebar slots, dashboard body content) still track normally unless a consumer ancestor opts out.
 - TreeExplorer semantic events no longer auto-promote node identifiers into tracking semantic IDs.
 
-These integration APIs are introduced in the coordinated `0.2.0-alpha.0` release line and later.
+These integration APIs are validated in the coordinated `0.2.0-alpha.0` source line. npm currently serves `@coderlifenet/ui-components@0.1.0-alpha.2`.
 
-## Candidate Validation Workflow
+## Local Source Validation Workflow
 
 Use fresh local candidate bytes from source before consumer checks:
 

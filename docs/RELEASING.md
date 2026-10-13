@@ -1,5 +1,11 @@
 # Public alpha release
 
+## Current npm-verified versions (2026-10-12 UTC)
+
+- `@coderlifenet/ui-components`: `alpha -> 0.1.0-alpha.2`, `latest -> 0.1.0-alpha.2`.
+- `@coderlifenet/ui-core`: `alpha -> 0.2.0-alpha.0`, `latest -> 0.1.0-alpha.2`.
+- Components `0.2.0-alpha.0` remains pending publication while this documentation update is in progress.
+
 ## Verified release closeout (2026-09-11 UTC)
 
 - [ui-components 0.1.0-alpha.2](https://www.npmjs.com/package/@coderlifenet/ui-components/v/0.1.0-alpha.2):
