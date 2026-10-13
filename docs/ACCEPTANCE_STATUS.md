@@ -2,6 +2,12 @@
 
 Date: 2026-09-08
 
+## Current npm snapshot (2026-10-12)
+
+- `@coderlifenet/ui-components`: `alpha -> 0.2.0-alpha.0`, `latest -> 0.1.0-alpha.2`.
+- `@coderlifenet/ui-core`: `alpha -> 0.2.0-alpha.0`, `latest -> 0.1.0-alpha.2`.
+- Historical `alpha.2` references below remain closeout evidence for that release window.
+
 ## Scope
 
 Alpha.2 bounded closeout for packaged consumer verification, browser runtime assertions, and external consumer portability.
@@ -21,8 +27,9 @@ They are not publication candidates. See RELEASING.md and the final prepare run
 for new-name artifact identity; the prior release approval is superseded.
 
 The hashes below identify the previous browser verification, not packs containing
-the new CI scripts. First-CI source packs remain unpublished alpha.2 and their
-actual integrity is recorded by the bootstrap and browser gates.
+the new CI scripts. Treat these as historical release evidence tied to
+`0.1.0-alpha.2`, while current source-line integrity is recorded by active
+prepare and browser gates.
 
 - Historical components tarball (pre-rename, archival only)
 - sha256: 28e83b1d37f806e1a0208817e6dbf0cee15f3991192c66baa73c27e1bb72096f
