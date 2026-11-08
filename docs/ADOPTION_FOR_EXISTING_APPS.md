@@ -5,7 +5,7 @@
 1. npm-published pair (verified now):
 
 ```bash
-pnpm add @coderlifenet/ui-components@0.2.0-alpha.0 @coderlifenet/ui-core@0.2.0-alpha.0 @mui/material@9.4.0 @emotion/react@11.14.0 @emotion/styled@11.14.1 react@19.2.8 react-dom@19.2.8
+pnpm add @coderlifenet/ui-components@0.2.0-alpha.1 @coderlifenet/ui-core@0.2.0-alpha.1 @mui/material@9.4.0 @emotion/react@11.14.0 @emotion/styled@11.14.1 react@19.2.8 react-dom@19.2.8
 ```
 
 2. Coordinated source pair (for local `0.2.0-alpha.1` verification):

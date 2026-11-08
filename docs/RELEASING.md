@@ -1,10 +1,33 @@
 # Public alpha release
 
-## Current npm-verified versions (2026-10-12 UTC)
+## Verified 0.2.0-alpha.1 release closeout (2026-11-08)
 
-- `@coderlifenet/ui-components`: `alpha -> 0.2.0-alpha.0`, `latest -> 0.1.0-alpha.2`.
-- `@coderlifenet/ui-core`: `alpha -> 0.2.0-alpha.0`, `latest -> 0.1.0-alpha.2`.
-- Both packages now publish `0.2.0-alpha.0` under `alpha` with npm attestations.
+Both packages are publicly available on npm. For both packages, `alpha` points
+to `0.2.0-alpha.1` and `latest` remains `0.1.0-alpha.2`. Components requires
+exactly `@coderlifenet/ui-core@0.2.0-alpha.1`. Core was published and verified
+before Components was published.
+[Core on npm](https://www.npmjs.com/package/@coderlifenet/ui-core/v/0.2.0-alpha.1) ·
+[Components on npm](https://www.npmjs.com/package/@coderlifenet/ui-components/v/0.2.0-alpha.1)
+
+- Published `main` commit `84d74f67bdc1633d259df24602c39e6bab181979`.
+- Main CI, preparation, and protected OIDC publication passed.
+  [CI](https://github.com/CoderLifeNet/ui-components/actions/runs/42456332109) · [Prepare](https://github.com/CoderLifeNet/ui-components/actions/runs/42458191852) ·
+  [Publish](https://github.com/CoderLifeNet/ui-components/actions/runs/42459938859)
+- Registry tarball SHA-256 `daa7dd4132aae224ad83d4fba4d5991443c43b0c2341def9c65daa2720cce804`.
+- Registry tarball integrity `sha512-sd65afN+Tzq77pNuprckVZp+F0wzLWEREnWxuQYHnjtOcBGrZWc+F90K3gPkoOifqKiFl0eSFQk9SKNePGLYIw==`.
+
+Both npm downloads matched the approved tarballs byte for byte. SLSA provenance
+matched each tarball digest, repository, exact source commit, `main` ref, workflow
+path, and OIDC invocation. A clean npm 11.11.1 signature audit of the exact pair
+verified 88 registry signatures and 24 attestations.
+[Companion release record](https://github.com/CoderLifeNet/ui-core/blob/20094421e9c321ef37f8385e1c74d328456e5f36/docs/RELEASING.md#verified-020-alpha1-release-closeout-2026-11-08)
+
+The registry-only Vite 5.4.21 and Next.js 16.3.4 production builds and external
+TypeScript 7.0.2 check passed. All three fixtures resolved both exact registry
+packages and shared a single Core installation within each fixture. The external
+fixture resolved one React 19.2.8 and one MUI 9.4.0 version. Chromium passed
+root and subpath event delivery, boundary opt-out, consent revocation, and
+analytics disablement in both apps with zero page or console errors.
 
 ## Verified release closeout (2026-09-11 UTC)
 
@@ -203,7 +226,7 @@ the correct repository URL. Publication uses `--tag alpha --access public
 
 ## Post-publication registry smoke checks
 
-For both packages, run `npm view <package>@0.2.0-alpha.0 version dist.integrity
+For both packages, run `npm view <package>@0.2.0-alpha.1 version dist.integrity
 dist.attestations repository --json` and `npm view <package> dist-tags --json`.
 Compare registry integrity with the approved workflow report, confirm public
 access, alpha points to the intended version, and latest remains absent/unchanged.
@@ -216,8 +239,8 @@ git archive HEAD | tar -x -C "$smoke"
 cd "$smoke"
 for fixture in vite-app next-app external-check; do
   npm pkg set --prefix "consumers/$fixture" \
-    'dependencies.@coderlifenet/ui-core=0.2.0-alpha.0' \
-    'dependencies.@coderlifenet/ui-components=0.2.0-alpha.0'
+    'dependencies.@coderlifenet/ui-core=0.2.0-alpha.1' \
+    'dependencies.@coderlifenet/ui-components=0.2.0-alpha.1'
   pnpm --dir "consumers/$fixture" install --no-frozen-lockfile --registry=https://registry.npmjs.org/
 done
 pnpm --dir consumers/vite-app build
