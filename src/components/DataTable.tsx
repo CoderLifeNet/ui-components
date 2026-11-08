@@ -289,7 +289,11 @@ export function DataTable<TRow>({
               {columns.map((column) => {
                 const isSorted = activeSort?.columnId === column.id;
                 return (
-                  <TableCell key={column.id} align={column.align ?? "left"}>
+                  <TableCell
+                    key={column.id}
+                    align={column.align ?? "left"}
+                    sortDirection={isSorted ? activeSort.direction : false}
+                  >
                     <TableSortLabel
                       active={isSorted}
                       direction={isSorted ? activeSort.direction : "asc"}
