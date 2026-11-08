@@ -138,7 +138,7 @@ export function TreeExplorer({
         else toggleNode(node);
         break;
       case "ArrowLeft":
-        if (expandedSet.has(node.id)) toggleNode(node);
+        if (node.children?.length && expandedSet.has(node.id)) toggleNode(node);
         else next = enabledNodes.find((candidate) => candidate.node.id === parentId);
         break;
       default: return;

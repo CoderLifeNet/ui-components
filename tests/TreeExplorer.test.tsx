@@ -125,6 +125,35 @@ describe("TreeExplorer", () => {
     expect(onSelectedIdChange).not.toHaveBeenCalled();
   });
 
+  it("moves focus to the parent with ArrowLeft after an expanded node becomes a leaf", async () => {
+    const user = userEvent.setup();
+    const onExpandedIdsChange = vi.fn();
+    const tree = (withChildren: boolean) => (
+      <TreeExplorer
+        nodes={[{ id: "docs", label: "Docs", children: [{
+          id: "guide",
+          label: "Guide",
+          ...(withChildren ? { children: [{ id: "chapter", label: "Chapter" }] } : {})
+        }] }]}
+        expandedIds={["docs", "guide"]}
+        selectedId="guide"
+        onExpandedIdsChange={onExpandedIdsChange}
+      />
+    );
+    const { rerender } = render(tree(true));
+    await user.tab();
+    const guide = screen.getByRole("treeitem", { name: "Guide" });
+    expect(guide).toHaveFocus();
+    expect(guide).toHaveAttribute("aria-expanded", "true");
+
+    rerender(tree(false));
+    expect(guide).not.toHaveAttribute("aria-expanded");
+    await user.keyboard("{ArrowLeft}");
+
+    expect(screen.getByRole("treeitem", { name: "Docs" })).toHaveFocus();
+    expect(onExpandedIdsChange).not.toHaveBeenCalled();
+  });
+
   it("does not expand or select disabled nodes", async () => {
     const user = userEvent.setup();
     const onExpandedIdsChange = vi.fn();
