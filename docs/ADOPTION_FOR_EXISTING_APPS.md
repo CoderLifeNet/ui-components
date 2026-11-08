@@ -8,13 +8,15 @@
 pnpm add @coderlifenet/ui-components@0.2.0-alpha.0 @coderlifenet/ui-core@0.2.0-alpha.0 @mui/material@9.4.0 @emotion/react@11.14.0 @emotion/styled@11.14.1 react@19.2.8 react-dom@19.2.8
 ```
 
-2. Coordinated source pair (for local `0.2.0-alpha.0` verification):
+2. Coordinated source pair (for local `0.2.0-alpha.1` verification):
 
 ```bash
 # in ui-core
 pnpm pack:local
 
 # in ui-components
+node scripts/prepare-artifacts.mjs --root
+pnpm install --frozen-lockfile
 pnpm pack:local
 pnpm check:consumers
 ```
@@ -50,6 +52,7 @@ pnpm install --frozen-lockfile
 pnpm pack:local
 
 cd ../ui-components
+node scripts/prepare-artifacts.mjs --root
 pnpm install --frozen-lockfile
 pnpm pack:local
 
@@ -63,7 +66,7 @@ npm run dev
 Notes:
 
 - This workflow requires `ui-core` and `ui-components` as sibling folders so file-based tarball paths resolve exactly.
-- `npm run build` was re-verified during this docs update on the pinned `0.2.0-alpha.0` local tarballs.
+- The demo fixture pins both local tarballs at `0.2.0-alpha.1`.
 - If `npm ci` fails, treat it as a lockfile/path drift signal:
 	1. verify sibling paths and rerun both `pnpm pack:local` commands;
 	2. if `docs/demo-app/package-lock.json` is stale after intentional path/version updates, regenerate it once with `npm install --package-lock-only --ignore-scripts --no-audit --no-fund`, commit that lockfile fix, then rerun the exact documented `npm ci` and `npm run build` commands.

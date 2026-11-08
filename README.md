@@ -44,10 +44,10 @@ These integration APIs are validated in the coordinated `0.2.0-alpha.0` source l
 
 ## Local Source Validation Workflow
 
-Use fresh local candidate bytes from source before consumer checks:
+Build the coordinated `0.2.0-alpha.1` candidate from source before consumer checks:
 
 1. In `ui-core`: `pnpm pack:local`
-2. In `ui-components`: `pnpm pack:local`
+2. In `ui-components`: `node scripts/prepare-artifacts.mjs --root && pnpm install --frozen-lockfile && pnpm pack:local`
 3. In `ui-components`: `pnpm check:consumers && pnpm check:external-consumer`
 
 Consumer lockfiles may be rewritten during local artifact install checks; treat those lockfile edits as transient verification output and keep PR diffs limited to durable library sources/tests/docs.
