@@ -17,7 +17,7 @@ permissions:
   contents: read
 
 env:
-  CORE_SOURCE_SHA: 6a17e8ecb1ff510bfb3b5e6096b46f8c99e7d8b3
+  CORE_SOURCE_SHA: cba27613cd2927d43e5f4f7ba3034036459a6bf4
 
 concurrency:
   group: npm-alpha
