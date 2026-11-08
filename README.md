@@ -14,7 +14,7 @@ Advanced components built on top of `@coderlifenet/ui-core` public APIs only.
 pnpm add @coderlifenet/ui-components@0.2.0-alpha.1 @coderlifenet/ui-core@0.2.0-alpha.1 @mui/material@9.4.0 @emotion/react@11.14.0 @emotion/styled@11.14.1 react@19.2.8 react-dom@19.2.8
 ```
 
-Version snapshot (2026-10-12):
+Version snapshot (2026-11-08):
 
 - `@coderlifenet/ui-components`: `alpha` resolves to `0.2.0-alpha.1`, `latest` resolves to `0.1.0-alpha.2`.
 - `@coderlifenet/ui-core`: `alpha` resolves to `0.2.0-alpha.1`, `latest` resolves to `0.1.0-alpha.2`.
