@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 env:
-  CORE_SOURCE_SHA: e6d0a521915b7dd66c8457129ec01f573a5da914
+  CORE_SOURCE_SHA: fa612955f578c655332e316b09bc058732d55a42
 
 jobs:
   build-test:
