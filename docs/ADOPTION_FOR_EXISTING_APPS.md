@@ -41,6 +41,9 @@ pnpm check:consumers
 
 ## docs/demo-app Local Tarball Workflow (Fresh Checkout)
 
+For a release candidate under review, check out its Components branch before
+building. Use the exact Core commit pinned by Components CI.
+
 ```bash
 # fresh checkout with sibling repositories
 git clone https://github.com/CoderLifeNet/ui-core.git
@@ -48,6 +51,7 @@ git clone https://github.com/CoderLifeNet/ui-components.git
 
 # pack the exact local tarballs referenced by docs/demo-app/package.json
 cd ui-core
+git checkout --detach fa612955f578c655332e316b09bc058732d55a42
 pnpm install --frozen-lockfile
 pnpm pack:local
 
