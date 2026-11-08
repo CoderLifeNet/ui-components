@@ -34,6 +34,7 @@ import { DataTable, TreeExplorer, DashboardLayout } from "@coderlifenet/ui-compo
 
 ## Tracking Integration Notes
 
+- Configure analytics providers in the application's Core runtime. Components send semantic events through that runtime and inherit its consent, provider selection, and tracking boundaries.
 - `semanticTrackingOnly` defaults to `true` for `DataTable` and `DashboardLayout`.
 - Owned internal controls suppress primitive duplicate events while semantic component events remain emitted.
 - Consumer-provided children/slots (toolbar actions, header/sidebar slots, dashboard body content) still track normally unless a consumer ancestor opts out.

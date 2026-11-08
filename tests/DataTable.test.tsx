@@ -40,6 +40,23 @@ describe("DataTable", () => {
     expect(screen.getByText("Noah")).toBeTruthy();
   });
 
+  it("exposes the current sort direction on the active column header", async () => {
+    const user = userEvent.setup();
+    render(<DataTable rows={rows} columns={columns} getRowId={(row) => row.id} />);
+
+    const visitsHeader = screen.getByRole("columnheader", { name: "Visits" });
+    const nameHeader = screen.getByRole("columnheader", { name: "Name" });
+    const visitsSort = screen.getByRole("button", { name: "Visits" });
+    expect(visitsHeader).not.toHaveAttribute("aria-sort");
+    await user.click(visitsSort);
+    expect(visitsHeader).toHaveAttribute("aria-sort", "ascending");
+    await user.click(visitsSort);
+    expect(visitsHeader).toHaveAttribute("aria-sort", "descending");
+    await user.click(screen.getByRole("button", { name: "Name" }));
+    expect(visitsHeader).not.toHaveAttribute("aria-sort");
+    expect(nameHeader).toHaveAttribute("aria-sort", "ascending");
+  });
+
   it("supports controlled pagination", async () => {
     const user = userEvent.setup();
     const onPageChange = vi.fn();
